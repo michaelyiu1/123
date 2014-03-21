@@ -153,11 +153,17 @@
 			<tocitem target="msim_function_categories.html#4">mUtil
 				<tocitem target="Dist_Point_LineSegment_help.html" image="HelpIcon.FUNCTION"> Dist_Point_LineSegment
 				</tocitem>
+				<tocitem target="helix_axis_help.html" image="HelpIcon.FUNCTION"> helix_axis
+				</tocitem>
 				<tocitem target="readArcGisASCIIfile_help.html" image="HelpIcon.FUNCTION"> readArcGisASCIIfile
 				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#5">mNPSAT
 				<tocitem target="ComputeURF_help.html" image="HelpIcon.FUNCTION"> ComputeURF
+				</tocitem>
+				<tocitem target="ConvoluteURF_help.html" image="HelpIcon.FUNCTION"> ConvoluteURF
+				</tocitem>
+				<tocitem target="distribute_particle_streams_help.html" image="HelpIcon.FUNCTION"> distribute_particle_streams
 				</tocitem>
 				<tocitem target="distribute_particle_wells_help.html" image="HelpIcon.FUNCTION"> distribute_particle_wells
 				</tocitem>

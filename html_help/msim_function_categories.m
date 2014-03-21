@@ -68,11 +68,13 @@
 %% mUtil
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
 % Point line distance
+% * <helix_axis_help.html |helix_axis|> - Generates points along a helix
+% with axis defined by two points
 % * <msim_mesh_options_help.html |msim_mesh_options|> - Default mesh
 % options
 
-%
-
 %% mNPSAT
-% * <ComputeURF_help.html |ComputeURF|> - Computes the Unit Response Function for a given streamline
-% * <distribute_particle_wells_help.html |distribute_particle_wells|> - Distribute particles around the wells
+% * <ComputeURF_help.html |ComputeURF|> - Computes the unit response function for a given streamline
+% * <ConvoluteURF_help.html |ConvoluteURF|> - Convolutes the unit response function with loading  functions
+% * <distribute_particle_streams_help.html |distribute_particle_streams|> - Distribute particles around streams
+% * <distribute_particle_wells_help.html |distribute_particle_wells|> - Distribute particles around wells
