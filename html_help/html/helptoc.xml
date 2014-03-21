@@ -149,6 +149,8 @@
 			<tocitem target="msim_function_categories.html#2">mTrans
 			</tocitem>
 			<tocitem target="msim_function_categories.html#3">mPart
+				<tocitem target="part_options_help.html" image="HelpIcon.FUNCTION"> part_options
+				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#4">mUtil
 				<tocitem target="Dist_Point_LineSegment_help.html" image="HelpIcon.FUNCTION"> Dist_Point_LineSegment

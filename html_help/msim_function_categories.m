@@ -63,7 +63,8 @@
 
 %
 %% mPart
-
+% * <part_options_help.html |part_options|> - returns the particle tracking
+% options
 %
 %% mUtil
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
