@@ -157,6 +157,10 @@
 				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#5">mNPSAT
+				<tocitem target="ComputeURF_help.html" image="HelpIcon.FUNCTION"> ComputeURF
+				</tocitem>
+				<tocitem target="distribute_particle_wells_help.html" image="HelpIcon.FUNCTION"> distribute_particle_wells
+				</tocitem>
 			</tocitem>
 		</tocitem>
     </tocitem>

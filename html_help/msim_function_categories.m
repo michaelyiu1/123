@@ -74,4 +74,5 @@
 %
 
 %% mNPSAT
+% * <ComputeURF_help.html |ComputeURF|> - Computes the Unit Response Function for a given streamline
 % * <distribute_particle_wells_help.html |distribute_particle_wells|> - Distribute particles around the wells

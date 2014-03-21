@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>distribute_particle_wells</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-18"><meta name="DC.source" content="distribute_particle_wells_help.m"><style type="text/css">
+      --><title>distribute_particle_wells</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-21"><meta name="DC.source" content="distribute_particle_wells_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,14 +65,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>distribute_particle_wells</h1><!--introduction--><p>Distributes uniformly the particles around the well screens. Well screens are assumed to be vertical lines defined by x, y, top and bottom elevation of the well screen.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output:</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>[xp, yp, zp, id_well] = distribute_particle_wells(wells, opt)</p><h2>Input:<a name="2"></a></h2><p><i><b>wells</b></i>  is a structure with the following fields</p><pre class="language-matlab">X: x coordinate
-</pre><pre class="language-matlab">Y: y coordinate
-</pre><pre class="language-matlab">zt: top elevation <span class="string">of</span> <span class="string">the</span> <span class="string">well</span> <span class="string">screen</span>
-</pre><pre class="language-matlab">zb: bottom elevation <span class="string">of</span> <span class="string">the</span> <span class="string">well</span> <span class="string">screen</span>
-</pre><p><i><b>opt</b></i>  is a structure that passes various options with the following fields</p><pre class="language-matlab">radius: distance between <span class="string">the</span> <span class="string">released</span> <span class="string">particle</span> <span class="string">and</span> <span class="string">the</span> <span class="string">x</span>,y <span class="string">location</span> <span class="string">of</span> <span class="string">the</span> <span class="string">well</span>
-</pre><pre class="language-matlab">Nl: number of <span class="string">layers</span>
-</pre><pre class="language-matlab">Nppl: Number of <span class="string">particles</span> <span class="string">per</span> <span class="string">layer</span>
-</pre><h2>Output:<a name="3"></a></h2><p><i><b>xp, yp, zp</b></i> Coordinates of the initial particle positions</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>distribute_particle_wells</h1><!--introduction--><p>Distributes uniformly the particles around the well screens. Well screens are assumed to be vertical lines defined by x, y, top and bottom elevation of the well screen.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output:</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>[xp, yp, zp, id_well] = distribute_particle_wells(wells, opt)</p><h2>Input:<a name="2"></a></h2><p><i><b>wells</b></i>:  is a structure with the following fields:</p><p>X: x coordinate</p><p>Y: y coordinate</p><p>zt: top elevation of the well screen</p><p>zb: bottom elevation of the well screen</p><p><i><b>opt</b></i>: is an option structure that passes various options with the following fields:</p><p>radius: distance between the released particle and the x,y location of the well</p><p>Nl: number of layers</p><p>Nppl: Number of particles per layer</p><h2>Output:<a name="3"></a></h2><p><i><b>xp, yp, zp</b></i> Coordinates of the initial particle positions</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% distribute_particle_wells
 %
@@ -99,23 +92,24 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %
 %% Input:
 %
-% _*wells*_  is a structure with the following fields
+% _*wells*_:  is a structure with the following fields:
 %
-%   X: x coordinate
+% X: x coordinate
 %
-%   Y: y coordinate
+% Y: y coordinate
 %
-%   zt: top elevation of the well screen
+% zt: top elevation of the well screen
 %
-%   zb: bottom elevation of the well screen
+% zb: bottom elevation of the well screen
 %
-% _*opt*_  is a structure that passes various options with the following fields
+% _*opt*_: is an option structure that passes various options with the following
+% fields:
 %
-%   radius: distance between the released particle and the x,y location of the well
+% radius: distance between the released particle and the x,y location of the well
 %
-%   Nl: number of layers
+% Nl: number of layers
 %
-%   Nppl: Number of particles per layer
+% Nppl: Number of particles per layer
 % 
 %% Output:
 % _*xp, yp, zp*_ Coordinates of the initial particle positions

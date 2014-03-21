@@ -23,23 +23,24 @@
 %
 %% Input:
 %
-% _*wells*_  is a structure with the following fields
+% _*wells*_:  is a structure with the following fields:
 %
-%   X: x coordinate
+% X: x coordinate
 %
-%   Y: y coordinate
+% Y: y coordinate
 %
-%   zt: top elevation of the well screen
+% zt: top elevation of the well screen
 %
-%   zb: bottom elevation of the well screen
+% zb: bottom elevation of the well screen
 %
-% _*opt*_  is a structure that passes various options with the following fields
+% _*opt*_: is an option structure that passes various options with the following
+% fields:
 %
-%   radius: distance between the released particle and the x,y location of the well
+% radius: distance between the released particle and the x,y location of the well
 %
-%   Nl: number of layers
+% Nl: number of layers
 %
-%   Nppl: Number of particles per layer
+% Nppl: Number of particles per layer
 % 
 %% Output:
 % _*xp, yp, zp*_ Coordinates of the initial particle positions
