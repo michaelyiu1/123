@@ -70,10 +70,14 @@
 % options
 %
 %% mUtil
-% * <Calc_Area_help.html |Calc_Area|> - Calculate the area of 2D mesh
+% * <Calc_Area_help.html |Calc_Area|> - Calculates the area of 2D mesh
 % elements
-% * <Calc_Barycenters_help.html |Calc_Barycenters|> - Calculate the
+% * <Calc_Barycenters_help.html |Calc_Barycenters|> - Calculates the
+% volume of mesh elements
+% * <Calc_volume_help.html |Calc_volume|> - Calculates the
 % barycentes of mesh elements
+% * <Centerfor2points_help.html |Centerfor2points|> - Computes the center 
+% of a circle
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
 % Point line distance
 % * <helix_axis_help.html |helix_axis|> - Generates points along a helix

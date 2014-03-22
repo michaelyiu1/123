@@ -159,6 +159,10 @@
 				</tocitem>
 				<tocitem target="Calc_Barycenters_help.html" image="HelpIcon.FUNCTION"> Calc_Barycenters
 				</tocitem>
+				<tocitem target="Calc_volume_help.html" image="HelpIcon.FUNCTION"> Calc_volume
+				</tocitem>
+				<tocitem target="Centerfor2points_help.html" image="HelpIcon.FUNCTION"> Centerfor2points
+				</tocitem>
 				<tocitem target="Dist_Point_LineSegment_help.html" image="HelpIcon.FUNCTION"> Dist_Point_LineSegment
 				</tocitem>
 				<tocitem target="helix_axis_help.html" image="HelpIcon.FUNCTION"> helix_axis
