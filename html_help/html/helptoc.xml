@@ -155,6 +155,10 @@
 				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#4">mUtil
+				<tocitem target="Calc_Area_help.html" image="HelpIcon.FUNCTION"> Calc_Area
+				</tocitem>
+				<tocitem target="Calc_Barycenters_help.html" image="HelpIcon.FUNCTION"> Calc_Barycenters
+				</tocitem>
 				<tocitem target="Dist_Point_LineSegment_help.html" image="HelpIcon.FUNCTION"> Dist_Point_LineSegment
 				</tocitem>
 				<tocitem target="helix_axis_help.html" image="HelpIcon.FUNCTION"> helix_axis

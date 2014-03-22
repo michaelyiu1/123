@@ -70,6 +70,10 @@
 % options
 %
 %% mUtil
+% * <Calc_Area_help.html |Calc_Area|> - Calculate the area of 2D mesh
+% elements
+% * <Calc_Barycenters_help.html |Calc_Barycenters|> - Calculate the
+% barycentes of mesh elements
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
 % Point line distance
 % * <helix_axis_help.html |helix_axis|> - Generates points along a helix
