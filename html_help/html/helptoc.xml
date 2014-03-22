@@ -149,6 +149,8 @@
 			<tocitem target="msim_function_categories.html#2">mTrans
 			</tocitem>
 			<tocitem target="msim_function_categories.html#3">mPart
+				<tocitem target="ParticleTracking_main_help.html" image="HelpIcon.FUNCTION"> ParticleTracking_main
+				</tocitem>
 				<tocitem target="part_options_help.html" image="HelpIcon.FUNCTION"> part_options
 				</tocitem>
 			</tocitem>

@@ -63,6 +63,9 @@
 
 %
 %% mPart
+% * <ParticleTracking_main_help.html |ParticleTracking_main|> - main
+% particle tracking function
+% options
 % * <part_options_help.html |part_options|> - returns the particle tracking
 % options
 %
