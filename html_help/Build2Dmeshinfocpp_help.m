@@ -1,11 +1,24 @@
 %% Build2Dmeshinfocpp
 %
 % Computes the connectivity of the mesh. This function generates the matrix
-% _*B*_ of function <ParticleTracking_main_help.html
-% ParticleTracking_main> function. This function is written in c therefore needs to be
+% _*B*_ of <ParticleTracking_main_help.html
+% ParticleTracking_main> function. It is written in c therefore needs to be
 % compiled first. *NOTE: THIS FUNCTION WORKS ON TRIANGULAR MESHES ONLY*.
 %
-% 
+%
+% Version : 1.0
+%
+% Author : George Kourakos
+%
+% email: giorgk@gmail.com
+%
+% web : http://groundwater.ucdavis.edu/msim
+%
+% Date 18-Mar-2014
+%
+% Department of Land Air and Water
+%
+% University of California Davis
 %
 %% Usage
 % B = Build2Dmeshinfocpp(MSH)
