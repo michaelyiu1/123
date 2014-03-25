@@ -82,8 +82,12 @@
 % of a circle
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
 % Point line distance
+% * <extrude_mesh_help.html |extrude_mesh|> - Extrudes 2D mesh to 3D mesh
+% * <find_elem_id_point_help.html |extrude_mesh|> - Finds the id of the
+% element that contains a given point
 % * <helix_axis_help.html |helix_axis|> - Generates points along a helix
 % with axis defined by two points
+% * <iscw_help.html |iscw|> - Checks the orientation of mesh elements
 % * <msim_mesh_options_help.html |msim_mesh_options|> - Default mesh
 % options
 

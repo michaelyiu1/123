@@ -167,7 +167,13 @@
 				</tocitem>
 				<tocitem target="Dist_Point_LineSegment_help.html" image="HelpIcon.FUNCTION"> Dist_Point_LineSegment
 				</tocitem>
+				<tocitem target="extrude_mesh_help.html" image="HelpIcon.FUNCTION"> extrude_mesh
+				</tocitem>
+				<tocitem target="find_elem_id_point_help.html" image="HelpIcon.FUNCTION"> find_elem_id_point
+				</tocitem>
 				<tocitem target="helix_axis_help.html" image="HelpIcon.FUNCTION"> helix_axis
+				</tocitem>
+				<tocitem target="iscw_help.html" image="HelpIcon.FUNCTION"> iscw
 				</tocitem>
 				<tocitem target="readArcGisASCIIfile_help.html" image="HelpIcon.FUNCTION"> readArcGisASCIIfile
 				</tocitem>
