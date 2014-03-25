@@ -70,6 +70,8 @@
 % options
 %
 %% mUtil
+% * <Build2Dmeshinfocpp_help.html |Build2Dmeshinfocpp|> - Generates the
+% connectivity mesh
 % * <Calc_Area_help.html |Calc_Area|> - Calculates the area of 2D mesh
 % elements
 % * <Calc_Barycenters_help.html |Calc_Barycenters|> - Calculates the
