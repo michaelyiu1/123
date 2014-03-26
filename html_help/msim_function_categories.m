@@ -80,6 +80,8 @@
 % barycentes of mesh elements
 % * <Centerfor2points_help.html |Centerfor2points|> - Computes the center 
 % of a circle
+% * <CSGobj_v2_help.html |CSGobj_v2|> - A class for the mesh
+% generation
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
 % Point line distance
 % * <extrude_mesh_help.html |extrude_mesh|> - Extrudes 2D mesh to 3D mesh
@@ -88,6 +90,8 @@
 % * <helix_axis_help.html |helix_axis|> - Generates points along a helix
 % with axis defined by two points
 % * <iscw_help.html |iscw|> - Checks the orientation of mesh elements
+% * <mapElemto2D_help.html |mapElemto2D|> - Transform elements (used
+% internally)
 % * <msim_mesh_options_help.html |msim_mesh_options|> - Default mesh
 % options
 

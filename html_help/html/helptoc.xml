@@ -165,6 +165,8 @@
 				</tocitem>
 				<tocitem target="Centerfor2points_help.html" image="HelpIcon.FUNCTION"> Centerfor2points
 				</tocitem>
+				<tocitem target="CSGobj_v2_help.html" image="HelpIcon.FUNCTION"> CSGobj_v2
+				</tocitem>
 				<tocitem target="Dist_Point_LineSegment_help.html" image="HelpIcon.FUNCTION"> Dist_Point_LineSegment
 				</tocitem>
 				<tocitem target="extrude_mesh_help.html" image="HelpIcon.FUNCTION"> extrude_mesh
@@ -174,6 +176,10 @@
 				<tocitem target="helix_axis_help.html" image="HelpIcon.FUNCTION"> helix_axis
 				</tocitem>
 				<tocitem target="iscw_help.html" image="HelpIcon.FUNCTION"> iscw
+				</tocitem>
+				<tocitem target="mapElemto2D_help.html" image="HelpIcon.FUNCTION"> mapElemto2D
+				</tocitem>
+				<tocitem target="msim_mesh_options_help.html" image="HelpIcon.FUNCTION"> msim_mesh_options
 				</tocitem>
 				<tocitem target="readArcGisASCIIfile_help.html" image="HelpIcon.FUNCTION"> readArcGisASCIIfile
 				</tocitem>
