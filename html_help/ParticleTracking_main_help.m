@@ -3,7 +3,7 @@
 % This is the main particle tracking function. This is only a wrapper
 % function for the various implementations of the particle tracking
 % routine. Currently particle tracking is available only for linear prism
-% elements, and the adaptive Rubge-Kutta 45 time stepping scheme is the only option.
+% elements, and the adaptive Runge-Kutta 45 time stepping scheme is the only option.
 %
 % Version : 1.0
 %
@@ -24,7 +24,7 @@
 %
 %% Input:
 %
-% _*sp*_ : [n_partx3] starting positions of the particles
+% _*sp*_ : [n_part x 3] starting positions of the particles
 %
 % _*XY*_ : [Np x 2] the x-y coordinates of the mesh nodes. It is assumed
 % that the nodes on every layer have the same x-y coordinates and different
@@ -34,7 +34,7 @@
 % has the coordinates for a different layer. Column 1 has the elevations of
 % the top layer and the last column the elevations of the bottom layer.
 %
-% _*MSH*_ : [NelxNpel] is the 2D mesh, where Nel is
+% _*MSH*_ : [Nel xN pel] is the 2D mesh, where Nel is
 % the number of 2D elements and Npel is the number of dof per element
 %
 % _*B*_ : is the element connectivity of the 2D Mesh. This is generated

@@ -181,7 +181,11 @@
 				</tocitem>
 				<tocitem target="msim_mesh_options_help.html" image="HelpIcon.FUNCTION"> msim_mesh_options
 				</tocitem>
+				<tocitem target="read_2D_Gmsh_help.html" image="HelpIcon.FUNCTION"> read_2D_Gmsh
+				</tocitem>
 				<tocitem target="readArcGisASCIIfile_help.html" image="HelpIcon.FUNCTION"> readArcGisASCIIfile
+				</tocitem>
+				<tocitem target="WriteVtkMesh_help.html" image="HelpIcon.FUNCTION"> WriteVtkMesh
 				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#5">mNPSAT
