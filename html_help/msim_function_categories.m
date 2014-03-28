@@ -33,12 +33,10 @@
 % * <calcBKBHex_quad_27_help.html |calcBKBHex_quad_27|> - Computes the the product
 % B'*K*B for quadratic hexahedral elements
 %
+% * <initialize_BEM_help.html |initialize_BEM|> - Initialize the matrix that will hold the shape functions derivatives
+% values
 % * <integr_order_help.html |integr_order|> - Computes the
 % gaussian integration points
-% * <initialize_BEM_help.html |initialize_BEM|> - Computes the
-% gaussian integration points
-% * <shapefunctions_help.html |shapefunctions|> - Computes the
-% shape functions
 % * <interp_with_shapefnc_help.html |interp_with_shapefnc|> - Interpolates
 % using shape functions values
 % 
@@ -64,6 +62,9 @@
 % shape function derivatives of linear hexahedral elements
 % * <shapeDerivHex_quad_27_help.html |shapeDerivHex_quad_27|> - Computes the
 % shape function derivatives of quadratic hexahedral elements
+%
+% * <shapefunctions_help.html |shapefunctions|> - Computes the
+% shape functions
 %
 %% mTrans
 % * <ADE1Danalytical_help.html |ADE1Danalytical|> - Analytical solution of the ADE in 1D

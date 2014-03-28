@@ -117,13 +117,11 @@
 					<tocitem target="calcBKBHex_quad_27_help.html" image="HelpIcon.FUNCTION"> calcBKBHex_quad_27
 					</tocitem>
 				</tocitem>
-				<tocitem target="integr_order_help.html" image="HelpIcon.FUNCTION"> integr_order
-				</tocitem>
 				<tocitem target="initialize_BEM_help.html" image="HelpIcon.FUNCTION"> initialize_BEM
 				</tocitem>
-				<tocitem target="interp_with_shapefnc_help.html" image="HelpIcon.FUNCTION"> interp_with_shapefnc
+				<tocitem target="integr_order_help.html" image="HelpIcon.FUNCTION"> integr_order
 				</tocitem>
-				<tocitem target="shapefunctions_help.html" image="HelpIcon.FUNCTION"> shapefunctions
+				<tocitem target="interp_with_shapefnc_help.html" image="HelpIcon.FUNCTION"> interp_with_shapefnc
 				</tocitem>
 				<tocitem target="shapeDerivatives_help.html" image="HelpIcon.FUNCTION"> shapeDerivatives
 					<tocitem target="shapeDerivLine_Lin_help.html" image="HelpIcon.FUNCTION"> shapeDerivLine_Lin
@@ -146,6 +144,8 @@
 					</tocitem>
 					<tocitem target="shapeDerivHex_quad_27_help.html" image="HelpIcon.FUNCTION"> shapeDerivHex_quad_27
 					</tocitem>
+				</tocitem>
+				<tocitem target="shapefunctions_help.html" image="HelpIcon.FUNCTION"> shapefunctions
 				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#2">mTrans
