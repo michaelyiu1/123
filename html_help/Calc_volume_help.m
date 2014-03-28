@@ -1,4 +1,7 @@
 %% Calc_volume
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the volume of 3D elements in a vectorized manner
 % Currently only hexahedrals are supported.
@@ -29,3 +32,8 @@
 %
 %% Output
 % _*V*_ : [Nel x 1] The volume of each element
+%%
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

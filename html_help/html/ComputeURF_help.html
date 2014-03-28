@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>ComputeURF</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-21"><meta name="DC.source" content="ComputeURF_help.m"><style type="text/css">
+      --><title>ComputeURF</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-28"><meta name="DC.source" content="ComputeURF_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,11 +65,14 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>ComputeURF</h1><!--introduction--><p>Computes the Unit Response Function for a given streamline.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Dec_2012</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output data</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>URF=ComputeURF(XYZ, Vxyz, opt)</p><h2>Input:<a name="2"></a></h2><p><i><b>XYZ</b></i>  : Streamline coordinates [Np x 3].</p><p><i><b>Vxyz</b></i> : Velocity of streamline points.</p><p><i><b>opt</b></i>  : An option structure with the following fields:</p><p>dx : discretization along streamline</p><p>dt : time discretization in years</p><p>Ttime : Total simulation time</p><p>Lmin : Minimum length for numerical solution. For streamlines with        length less than Lmin an analytical solution will be used.</p><p>lambda.type : 1-&gt;lambda is scalar             : 0-&gt;variable</p><p>lambda.val : if type == 1, decay <img src="ComputeURF_help_eq23351.png" alt="$\lambda$"> = lambda.val(1),              if type == 0, decay <img src="ComputeURF_help_eq23351.png" alt="$\lambda$"> = lambda.val ( lambda.val has to                             be equal to Np)</p><h2>Output data<a name="3"></a></h2><p><i><b>URF</b></i>  : Unit response function</p><p><b>Note</b>: The first point in XYZ is the starting point of the backward particle tracking near the CDS (e.g. the wells).</p><p>In FEM formulation we assume that the first point is near the land surface, therefore we reverse the order inside the script.</p><pre>|---v1----|---v2---|----v3-----|
+  </style></head><body><div class="content"><h1>ComputeURF</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="Tutorials">| msim_help_demos.html</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Computes the Unit Response Function for a given streamline.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Dec_2012</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output data</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>URF=ComputeURF(XYZ, Vxyz, opt)</p><h2>Input:<a name="2"></a></h2><p><i><b>XYZ</b></i>  : Streamline coordinates [Np x 3].</p><p><i><b>Vxyz</b></i> : Velocity of streamline points.</p><p><i><b>opt</b></i>  : An option structure with the following fields:</p><p>dx : discretization along streamline</p><p>dt : time discretization in years</p><p>Ttime : Total simulation time</p><p>Lmin : Minimum length for numerical solution. For streamlines with        length less than Lmin an analytical solution will be used.</p><p>lambda.type : 1-&gt;lambda is scalar             : 0-&gt;variable</p><p>lambda.val : if type == 1, decay <img src="ComputeURF_help_eq23351.png" alt="$\lambda$"> = lambda.val(1),              if type == 0, decay <img src="ComputeURF_help_eq23351.png" alt="$\lambda$"> = lambda.val ( lambda.val has to                             be equal to Np)</p><h2>Output data<a name="3"></a></h2><p><i><b>URF</b></i>  : Unit response function</p><p><b>Note</b>: The first point in XYZ is the starting point of the backward particle tracking near the CDS (e.g. the wells).</p><p>In FEM formulation we assume that the first point is near the land surface, therefore we reverse the order inside the script.</p><pre>|---v1----|---v2---|----v3-----|
 -------------------------------------
-x1       x2        x3         x4</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+x1       x2        x3         x4</pre><p><a href="msim_help_main.html">| main</a>   <a href="Tutorials">| msim_help_demos.html</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% ComputeURF
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the Unit Response Function for a given streamline.
 %
@@ -129,6 +132,11 @@ x1       x2        x3         x4</pre><p class="footer"><br><a href="http://www.
 %  |REPLACE_WITH_DASH_DASH-v1REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH|REPLACE_WITH_DASH_DASH-v2REPLACE_WITH_DASH_DASH-|REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHv3REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-|
 %  REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
 %  x1       x2        x3         x4
+%
+%%
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 ##### SOURCE END #####
 --></body></html>

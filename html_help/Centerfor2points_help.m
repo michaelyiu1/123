@@ -1,4 +1,7 @@
 %% Centerfor2points
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the center of a circle that pass from two known points and a
 % given radius.
@@ -46,9 +49,9 @@ zLayfnc = inline('yo+sqrt(r^2-(x-xo).^2)')
 % center of the circle xo, yo 
 %%%
 % Next we compute the center of the circle that goes through the points [0
-% 0] and [1 1], while the radius while determine how the elevations are
-% distributed. The next loop copmutes the layer distribution of different
-% values 
+% 0] and [1 1], while the radius will determine how the elevations are
+% distributed. The next loop computes the layer distribution of different
+% r values 
 r = [1 1.1 1.3 1.6 2 2.5 3];
 clr = [1 0 0; 0 1 0; 0 0 1; 1 1 0; 1 0 1; 0 1 1; 0.5 0.5 0.5];
 for i = 1:length(r)
@@ -67,3 +70,8 @@ subplot(1,2,2);xlabel('r')
 % layer distribution. In essence the idea is to project uniformly
 % distributed numbers on the cycle and change the distribution according to
 % the radius.
+%%
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
