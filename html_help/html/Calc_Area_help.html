@@ -65,7 +65,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Calc_Area</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="Tutorials">| msim_help_demos.html</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Computes the area of 2D mesh elements in a vectorized manner. It workds for triangular and quadrilateral elements of any order. However the sides of the elements must be striaght lines otherwise the calculation will be wrong.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output</a></li><li><a href="#4">Example</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>A = Calc_Area(p, MSH);</p><h2>Input:<a name="2"></a></h2><p><i><b>p</b></i> : [Np x 2] coordinates</p><p><i><b>MSH</b></i> : [Nel, Nsh] Mesh element ids. Nel is the number of elements and Nsh is the number of shapefunctions. The ids correspond to the row of the array <i><b>p</b></i></p><h2>Output<a name="3"></a></h2><p><i><b>A</b></i> : [Nel x 1] The area of each element.</p><h2>Example<a name="4"></a></h2><p>Create a hypothetical mesh</p><pre class="codeinput">p = 10 * rand(10,2);
+  </style></head><body><div class="content"><h1>Calc_Area</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Computes the area of 2D mesh elements in a vectorized manner. It workds for triangular and quadrilateral elements of any order. However the sides of the elements must be striaght lines otherwise the calculation will be wrong.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output</a></li><li><a href="#4">Example</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>A = Calc_Area(p, MSH);</p><h2>Input:<a name="2"></a></h2><p><i><b>p</b></i> : [Np x 2] coordinates</p><p><i><b>MSH</b></i> : [Nel, Nsh] Mesh element ids. Nel is the number of elements and Nsh is the number of shapefunctions. The ids correspond to the row of the array <i><b>p</b></i></p><h2>Output<a name="3"></a></h2><p><i><b>A</b></i> : [Nel x 1] The area of each element.</p><h2>Example<a name="4"></a></h2><p>Create a hypothetical mesh</p><pre class="codeinput">p = 10 * rand(10,2);
 MSH = delaunay(p(:,1), p(:,2));
 </pre><p>Calculate the area of each element</p><pre class="codeinput">A = Calc_Area(p, MSH);
 </pre><p>Calculate the barycenter of each element</p><pre class="codeinput">cc = Calc_Barycenters(p,MSH);
@@ -74,11 +74,11 @@ hold <span class="string">on</span>
 <span class="keyword">for</span> i = 1:size(cc, 1)
     text(cc(i,1),cc(i,2),num2str(A(i,1)),<span class="string">'HorizontalAlignment'</span>,<span class="string">'center'</span>)
 <span class="keyword">end</span>
-</pre><img vspace="5" hspace="5" src="Calc_Area_help_01.png" alt=""> <p><a href="msim_help_main.html">| main</a>   <a href="Tutorials">| msim_help_demos.html</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="Calc_Area_help_01.png" alt=""> <p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Calc_Area
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 %
@@ -133,7 +133,7 @@ for i = 1:size(cc, 1)
 end
 %%
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 ##### SOURCE END #####

@@ -1,4 +1,7 @@
 %% ConvoluteURF
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % This function convolutes the unit response function with loading
 % functions. 
@@ -43,3 +46,8 @@
 %% Output data 
 % _*BTC*_: The Breakthrough curve that coresponds to convolution of the i URF
 % with the i loading function 
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
