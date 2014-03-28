@@ -1,4 +1,7 @@
 %% read_2D_Gmsh
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Reads the .msh file generated from Gmsh
 %
@@ -54,3 +57,8 @@
 % _id_ is the matrix which contains the connentivity of the points
 % the last field is _dom_ and it was supposed to be used when the Gmesh 
 % partition the mesh for parallel assembly, Currently we are doing this out of Gmsh. 
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

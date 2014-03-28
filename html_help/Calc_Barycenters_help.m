@@ -1,6 +1,6 @@
 %% Calc_Barycenters
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the barycenters of mesh elements in a
@@ -47,6 +47,6 @@ hold on
 plot(cc(:,1), cc(:,2),'or')
 %%
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %

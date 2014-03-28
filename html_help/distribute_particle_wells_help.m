@@ -1,4 +1,7 @@
 %% distribute_particle_wells
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Distributes uniformly the particles around the well screens.
 % Well screens are assumed to be vertical lines defined by x, y,
@@ -44,3 +47,8 @@
 % 
 %% Output:
 % _*xp, yp, zp*_ Coordinates of the initial particle positions
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

@@ -1,4 +1,7 @@
 %% CSGobj_v2
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % This is a class which stores the geometric features of the
 % domain. The primary purpose of this class is to read shapefiles or
@@ -119,3 +122,8 @@
 %
 % _*opt*_: a structure with mesh options. 
 % <msim_mesh_options_help.html msim_mesh_options> for details
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

@@ -1,4 +1,8 @@
 %% System Requirments
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 % To run mSim you need the basic Matlab toolboxes or Octave.
 % However the classes have been written in the new Matlab style which is
 % currently (2013) not supported by Octave. The majority of the code 
@@ -23,3 +27,7 @@ addpath(genpath('msim_root'));
 msim_compile;
 %%%
 % To compile all the C/C++ functions
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

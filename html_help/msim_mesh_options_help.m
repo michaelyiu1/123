@@ -1,4 +1,7 @@
 %% msim_mesh_options
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Returns a structure variable with default options to run Gmsh. The
 % primary purpose of this function is to return a variable with all
@@ -46,3 +49,8 @@
 %% Example
 % The default mSim mesh options are:
 opt=msim_mesh_options
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

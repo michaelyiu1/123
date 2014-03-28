@@ -1,6 +1,6 @@
 %% ComputeURF
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the Unit Response Function for a given streamline.
@@ -64,6 +64,6 @@
 %
 %%
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %

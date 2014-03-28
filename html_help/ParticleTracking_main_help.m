@@ -1,4 +1,7 @@
 %% ParticleTracking_main
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % This is the main particle tracking function. This is only a wrapper
 % function for the various implementations of the particle tracking
@@ -77,4 +80,8 @@
 % _*bed_corr*_ to true (see <part_options_help.html
 % |part_options|>).
 %
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %

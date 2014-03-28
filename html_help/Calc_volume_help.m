@@ -1,6 +1,6 @@
 %% Calc_volume
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the volume of 3D elements in a vectorized manner
@@ -34,6 +34,6 @@
 % _*V*_ : [Nel x 1] The volume of each element
 %%
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %

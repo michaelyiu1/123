@@ -1,4 +1,7 @@
 %% extrude_mesh
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Extrudes a 2D mesh to 3D. If the 2D mesh has triangular elements the 3D
 % elements will be prisms. If the 2D mesh has quadrilaterals then the 3D
@@ -45,3 +48,8 @@
 % _*MSH*_ 3D mesh structure.
 %
 % see also: <Centerfor2points_help.html Centerfor2points>
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

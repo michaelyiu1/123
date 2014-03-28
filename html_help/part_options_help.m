@@ -1,4 +1,7 @@
 %% part_options
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Returns a structure with fields the required options for
 % particle tracking
@@ -65,5 +68,9 @@
 % mode (vect)  :     other options are 'cpp' and 'serial'
 %
 % el_type (1) :      1-> trianlge, 2-> quadrilateral
-
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 

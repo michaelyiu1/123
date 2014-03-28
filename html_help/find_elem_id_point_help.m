@@ -1,4 +1,7 @@
 %% find_elem_id_point
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Finds the id of the element that contains a given point.
 % It workds only for 2D Meshes
@@ -52,3 +55,8 @@ for i = 1:size(MSH,1)
     plot(pnt(id == i,1), pnt(id == i,2),'.','color',[rand rand rand]);
 end
 plot(pnt(isnan(id),1), pnt(isnan(id),2),'.k');
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

@@ -1,4 +1,7 @@
 %% mSim Toolbox
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % *A Matlab Toolbox for the simulation of Non-Point Source Pollution*
 % (and not only...)
@@ -37,3 +40,8 @@
 % We have also writen few functions in C/C++ which are called by other 
 % Matlab/Octave functions Therefore and the users do not directly interact
 % with the C/C++ code.
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

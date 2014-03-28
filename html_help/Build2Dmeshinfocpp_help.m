@@ -1,6 +1,6 @@
 %% Build2Dmeshinfocpp
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the connectivity of the mesh. This function generates the matrix
@@ -60,6 +60,6 @@ B = Build2Dmeshinfocpp(MSH')
 % zero, there is no element conected to that side.
 %%
 % 
-% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %

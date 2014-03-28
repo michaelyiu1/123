@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>find_elem_id_point</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-25"><meta name="DC.source" content="find_elem_id_point_help.m"><style type="text/css">
+      --><title>find_elem_id_point</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-28"><meta name="DC.source" content="find_elem_id_point_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,8 +65,8 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>find_elem_id_point</h1><!--introduction--><p>Finds the id of the element that contains a given point. It workds only for 2D Meshes</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input</a></li><li><a href="#3">Output</a></li><li><a href="#4">Example</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>id = find_elem_id_point(p, MSH, pnt, Nsearch)</p><h2>Input<a name="2"></a></h2><p><i><b>p</b></i>: Mesh node coordinates [ np x 2]</p><p><i><b>MSH</b></i> : Mesh [Nel x Nsh]</p><p><i><b>pnt</b></i> : coordinates of points to search for their element ids [Np x 2]</p><p><i><b>Nsearch</b></i>: The function computes first the barycenters of the elements and checks only the Nsearch closer elements for each point</p><h2>Output<a name="3"></a></h2><p><i><b>id</b></i>: a list of element ids</p><h2>Example<a name="4"></a></h2><p>Create a hypothetical mesh</p><pre class="codeinput"> p = 10*rand(10,2);
- MSH = delaunay(p(:,1), p(:,2));
+  </style></head><body><div class="content"><h1>find_elem_id_point</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Finds the id of the element that contains a given point. It workds only for 2D Meshes</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input</a></li><li><a href="#3">Output</a></li><li><a href="#4">Example</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>id = find_elem_id_point(p, MSH, pnt, Nsearch)</p><h2>Input<a name="2"></a></h2><p><i><b>p</b></i>: Mesh node coordinates [ np x 2]</p><p><i><b>MSH</b></i> : Mesh [Nel x Nsh]</p><p><i><b>pnt</b></i> : coordinates of points to search for their element ids [Np x 2]</p><p><i><b>Nsearch</b></i>: The function computes first the barycenters of the elements and checks only the Nsearch closer elements for each point</p><h2>Output<a name="3"></a></h2><p><i><b>id</b></i>: a list of element ids</p><h2>Example<a name="4"></a></h2><p>Create a hypothetical mesh</p><pre class="codeinput">p = 10*rand(10,2);
+MSH = delaunay(p(:,1), p(:,2));
 </pre><p>Create 100 random points</p><pre class="codeinput">pnt = 10*rand(100,2);
 </pre><p>Now check the element ids of each point</p><pre class="codeinput">id = find_elem_id_point(p, MSH, pnt, 5);
 </pre><p>For each element plot which points contains and last plot those that they are outside of the mesh</p><pre class="codeinput">triplot(MSH, p(:,1),p(:,2));
@@ -75,9 +75,12 @@ hold <span class="string">on</span>
     plot(pnt(id == i,1), pnt(id == i,2),<span class="string">'.'</span>,<span class="string">'color'</span>,[rand rand rand]);
 <span class="keyword">end</span>
 plot(pnt(isnan(id),1), pnt(isnan(id),2),<span class="string">'.k'</span>);
-</pre><img vspace="5" hspace="5" src="find_elem_id_point_help_01.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="find_elem_id_point_help_01.png" alt=""> <p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% find_elem_id_point
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Finds the id of the element that contains a given point.
 % It workds only for 2D Meshes
@@ -114,8 +117,8 @@ plot(pnt(isnan(id),1), pnt(isnan(id),2),<span class="string">'.k'</span>);
 %
 %% Example
 % Create a hypothetical mesh
- p = 10*rand(10,2);
- MSH = delaunay(p(:,1), p(:,2));
+p = 10*rand(10,2);
+MSH = delaunay(p(:,1), p(:,2));
 %%%
 % Create 100 random points
 pnt = 10*rand(100,2);
@@ -131,5 +134,10 @@ for i = 1:size(MSH,1)
     plot(pnt(id == i,1), pnt(id == i,2),'.','color',[rand rand rand]);
 end
 plot(pnt(isnan(id),1), pnt(isnan(id),2),'.k');
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 ##### SOURCE END #####
 --></body></html>

@@ -1,4 +1,7 @@
 %% readArcGisASCIIfile
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Reads ARCGIS raster data in ascii format
 %
@@ -34,4 +37,9 @@
 %      such as # rows and columns, cell size,
 %      coordinates of left lower corner of the grid and
 %      No data value
+%
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %

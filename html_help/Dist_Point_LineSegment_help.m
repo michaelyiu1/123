@@ -1,4 +1,7 @@
 %% Dist_Point_LineSegment
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the minimum distance between a point and a line segment.
 % The function is vectorized only for one point many lines or many points
@@ -45,7 +48,7 @@
 %%%
 % Create 10 points and one line
 p = 10*rand(10,2);
-L= [0 5 5 5];
+L= [2 5 7 5];
 %%%
 % compute the distances between the line and the point
 dst = Dist_Point_LineSegment(p(:,1), p(:,2), L)
@@ -74,4 +77,8 @@ for i = 1:size(L,1)
     plot([L(i,1) L(i,3)], [L(i,2) L(i,4)],'.-')
     text((L(i,1) + L(i,3))/2, (L(i,2) + L(i,4))/2, [' ' num2str(dst(i))])
 end
-
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

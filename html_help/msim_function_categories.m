@@ -1,6 +1,10 @@
 %% Functions by Category
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 % mSim Toolbox
-% Version 1.0 25-Dec-2021
+% Version 1.0 28-March-2014
 %
 %% mFlow
 % * <Assemble_LHS_help.html |Assemble_LHS|> - Assemble Condunctunce Matrix
@@ -85,7 +89,7 @@
 % * <Dist_Point_LineSegment_help.html |Dist_Point_LineSegment|> - Computes
 % Point line distance
 % * <extrude_mesh_help.html |extrude_mesh|> - Extrudes 2D mesh to 3D mesh
-% * <find_elem_id_point_help.html |extrude_mesh|> - Finds the id of the
+% * <find_elem_id_point_help.html |find_elem_id_point|> - Finds the id of the
 % element that contains a given point
 % * <helix_axis_help.html |helix_axis|> - Generates points along a helix
 % with axis defined by two points
@@ -103,3 +107,8 @@
 % * <ConvoluteURF_help.html |ConvoluteURF|> - Convolutes the unit response function with loading  functions
 % * <distribute_particle_streams_help.html |distribute_particle_streams|> - Distribute particles around streams
 % * <distribute_particle_wells_help.html |distribute_particle_wells|> - Distribute particles around wells
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

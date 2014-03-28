@@ -1,6 +1,10 @@
 %% mSim
 % *A Matlab Toolbox for the simulation of non-point source pollution*
 % (and not only...)
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 
 %% Introduction
 % The mSim is a collection of matlab functions which solve the
@@ -58,6 +62,11 @@
 % # Support of transient state flow
 % # Extend the transport simulations to higher dimensions
 % # Support transient transport simulation
+%
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 
 

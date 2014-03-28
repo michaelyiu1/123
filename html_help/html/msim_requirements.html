@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>System Requirments</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-18"><meta name="DC.source" content="msim_requirements.m"><style type="text/css">
+      --><title>System Requirments</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-28"><meta name="DC.source" content="msim_requirements.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,11 +65,15 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>System Requirments</h1><!--introduction--><p>To run mSim you need the basic Matlab toolboxes or Octave. However the classes have been written in the new Matlab style which is currently (2013) not supported by Octave. The majority of the code is written as functions, and only a small number of preprocessing tasks are written in an object oriented programming style.</p><!--/introduction--><p>mSim is expected to run in any computer that can run either Matlab or Octave. The code has been tested on several Linux and Windows OS.</p><p>The mSim is a collection of m-files organized in folders. Therefore to obtain access to all available function you need to add the mSim path by typing</p><pre class="codeinput">addpath(genpath(<span class="string">'msim_root'</span>));
+  </style></head><body><div class="content"><h1>System Requirments</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>To run mSim you need the basic Matlab toolboxes or Octave. However the classes have been written in the new Matlab style which is currently (2013) not supported by Octave. The majority of the code is written as functions, and only a small number of preprocessing tasks are written in an object oriented programming style.</p><!--/introduction--><p>mSim is expected to run in any computer that can run either Matlab or Octave. The code has been tested on several Linux and Windows OS.</p><p>The mSim is a collection of m-files organized in folders. Therefore to obtain access to all available function you need to add the mSim path by typing</p><pre class="codeinput">addpath(genpath(<span class="string">'msim_root'</span>));
 </pre><p>where msim_root is the top level directory of mSim</p><p>Optionally you can add the above line in the <a href="http://www.mathworks.com/help/matlab/ref/startup.html">startup file</a></p><p>In addition we have writen few functions in C/C++ which have to be compiled. On the top level directory of mSim run</p><pre class="codeinput">msim_compile;
-</pre><p>To compile all the C/C++ functions</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+</pre><p>To compile all the C/C++ functions</p><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% System Requirments
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 % To run mSim you need the basic Matlab toolboxes or Octave.
 % However the classes have been written in the new Matlab style which is
 % currently (2013) not supported by Octave. The majority of the code 
@@ -94,6 +98,9 @@ addpath(genpath('msim_root'));
 msim_compile;
 %%%
 % To compile all the C/C++ functions
-
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 ##### SOURCE END #####
 --></body></html>

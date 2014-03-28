@@ -1,4 +1,7 @@
 %% distribute_particle_streams
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Distributes particles around streams as shown: 
 %
@@ -71,3 +74,8 @@ plot3(streams.X, streams.Y, streams.Z,'.-r')
 hold on
 plot3(xp,yp,zp,'.')
 view(24,36)
+%%
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
