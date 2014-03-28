@@ -147,6 +147,20 @@
 				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#2">mTrans
+				<tocitem target="ADE1Danalytical_help.html" image="HelpIcon.FUNCTION"> ADE1Danalytical
+				</tocitem>
+				<tocitem target="Assemble_LHS_std_help.html" image="HelpIcon.FUNCTION"> Assemble_LHS_std
+				</tocitem>
+				<tocitem target="calcNvB_help.html" image="HelpIcon.FUNCTION"> calcNvB
+					<tocitem target="calcNDBline_Lin_help.html" image="HelpIcon.FUNCTION"> calcNDBline_Lin
+					</tocitem>
+				</tocitem>
+				<tocitem target="calcNLN_help.html" image="HelpIcon.FUNCTION"> calcNLN
+				</tocitem>
+				<tocitem target="DispCoeff_help.html" image="HelpIcon.FUNCTION"> DispCoeff
+				</tocitem>
+				<tocitem target="SteadyFlowTransport_help.html" image="HelpIcon.FUNCTION"> SteadyFlowTransport
+				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#3">mPart
 				<tocitem target="ParticleTracking_main_help.html" image="HelpIcon.FUNCTION"> ParticleTracking_main

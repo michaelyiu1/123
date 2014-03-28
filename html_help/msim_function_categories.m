@@ -62,9 +62,20 @@
 % shape function derivatives of quadratic hexahedral elements
 % * <calcBKBHex_quad_27_help.html |calcBKBHex_quad_27|> - Computes the the product
 % B'*K*B for quadratic hexahedral elements
-
+%
 %% mTrans
-
+% * <ADE1Danalytical_help.html |ADE1Danalytical|> - Analytical solution of the ADE in 1D
+% * <Assemble_LHS_std_help.html |Assemble_LHS_std|> - Assembles the
+% matrices for ADE in steady state flow
+%
+% * <calcNvB_help.html |calcNvB|> - Computes the product N*v*B in vectorized manner
+% * <calcNDBline_Lin_help.html |calcNDBline_Lin|> - Computes the product N*v*B for linear line elements
+%
+% * <calcNLN_help.html |calcNLN|> - Computes the product N'*L*N in
+% vectorized manner for linear line elements
+% * <DispCoeff_help.html |DispCoeff|> - Calculates the dispersion coefficients
+% * <SteadyFlowTransport_help.html |SteadyFlowTransport|> - Solves the Advection 
+% dispersion equation for steady state flow
 %
 %% mPart
 % * <ParticleTracking_main_help.html |ParticleTracking_main|> - main

@@ -27,7 +27,7 @@ function URF=ComputeURF(XYZ, Vxyz, opt)
 % Author : George Kourakos
 % email: giorgk@gmail.com
 % web : http://groundwater.ucdavis.edu/msim
-% Date 18-Dec_2012
+% Date 28-Mar_2014
 % Department of Land Air and Water
 % University of California Davis
 %
