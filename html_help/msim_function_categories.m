@@ -7,7 +7,32 @@
 % Version 1.0 28-March-2014
 %
 %% mFlow
-% * <Assemble_LHS_help.html |Assemble_LHS|> - Assemble Condunctunce Matrix
+% * <Assemble_LHS_help.html |Assemble_LHS|> - Assemble the condunctunce matrix
+% * <Assemble_RHS_help.html |Assemble_RHS|> - Assemble the right hand side
+%
+% * <calcBKB_help.html |caclBKB|> - Computes the product B'*K*B
+% * <calcBKBline_Lin_help.html |calcBKBline_Lin|> - Computes the the product
+% B'*K*B for linear line elements
+% * <calcBKBline_quad_help.html |calcBKBline_quad|> - Computes the the product
+% B'*K*B for linear line elements
+% * <calcBKBtriang_Lin_help.html |calcBKBtriang_Lin|> - Computes the the product
+% B'*K*B for linear trianlge elements
+% * <calcBKBtriang_quad_help.html |calcBKBtriang_quad|> - Computes the the product
+% B'*K*B for quadratic trianlge elements
+% * <calcBKBQuad_Lin_help.html |calcBKBQuad_Lin|> - Computes the the product
+% B'*K*B for linear quadrilateral elements
+% * <calcBKBQuad_quad_9_help.html |calcBKBQuad_quad_9|> - Computes the the product
+% B'*K*B for quadratic quadrilateral elements
+% * <calcBKBPrism_Lin_help.html |calcBKBPrism_Lin|> - Computes the the product
+% B'*K*B for linear prism elements
+% * <calcBKBPrism_quad_help.html |calcBKBPrism_quad|> - Computes the the product
+% B'*K*B for quadratic prism elements
+% * <calcBKBHex_Lin_help.html |calcBKBHex_Lin|> - Computes the the product
+% B'*K*B for linear hexahedral elements
+% shape function derivatives of quadratic hexahedral elements
+% * <calcBKBHex_quad_27_help.html |calcBKBHex_quad_27|> - Computes the the product
+% B'*K*B for quadratic hexahedral elements
+%
 % * <integr_order_help.html |integr_order|> - Computes the
 % gaussian integration points
 % * <initialize_BEM_help.html |initialize_BEM|> - Computes the
@@ -39,29 +64,6 @@
 % shape function derivatives of linear hexahedral elements
 % * <shapeDerivHex_quad_27_help.html |shapeDerivHex_quad_27|> - Computes the
 % shape function derivatives of quadratic hexahedral elements
-%
-% * <caclBKB_help.html |caclBKB|> - Computes the product B'*K*B
-% * <calcBKBline_Lin_help.html |calcBKBline_Lin|> - Computes the the product
-% B'*K*B for linear line elements
-% * <calcBKBline_quad_help.html |calcBKBline_quad|> - Computes the the product
-% B'*K*B for linear line elements
-% * <calcBKBtriang_Lin_help.html |calcBKBtriang_Lin|> - Computes the the product
-% B'*K*B for linear trianlge elements
-% * <calcBKBtriang_quad_help.html |calcBKBtriang_quad|> - Computes the the product
-% B'*K*B for quadratic trianlge elements
-% * <calcBKBQuad_Lin_help.html |calcBKBQuad_Lin|> - Computes the the product
-% B'*K*B for linear quadrilateral elements
-% * <calcBKBQuad_quad_9_help.html |calcBKBQuad_quad_9|> - Computes the the product
-% B'*K*B for quadratic quadrilateral elements
-% * <calcBKBPrism_Lin_help.html |calcBKBPrism_Lin|> - Computes the the product
-% B'*K*B for linear prism elements
-% * <calcBKBPrism_quad_help.html |calcBKBPrism_quad|> - Computes the the product
-% B'*K*B for quadratic prism elements
-% * <calcBKBHex_Lin_help.html |calcBKBHex_Lin|> - Computes the the product
-% B'*K*B for linear hexahedral elements
-% shape function derivatives of quadratic hexahedral elements
-% * <calcBKBHex_quad_27_help.html |calcBKBHex_quad_27|> - Computes the the product
-% B'*K*B for quadratic hexahedral elements
 %
 %% mTrans
 % * <ADE1Danalytical_help.html |ADE1Danalytical|> - Analytical solution of the ADE in 1D

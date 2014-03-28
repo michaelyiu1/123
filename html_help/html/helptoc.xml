@@ -93,6 +93,30 @@
 			<tocitem target="msim_function_categories.html#1">mFlow
 				<tocitem target="Assemble_LHS_help.html" image="HelpIcon.FUNCTION"> Assemble_LHS
 				</tocitem>
+				<tocitem target="Assemble_RHS_help.html" image="HelpIcon.FUNCTION"> Assemble_RHS
+				</tocitem>
+				<tocitem target="calcBKB_help.html" image="HelpIcon.FUNCTION"> calcBKB_help
+					<tocitem target="calcBKBline_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBline_Lin
+					</tocitem>
+					<tocitem target="calcBKBline_quad_help.html" image="HelpIcon.FUNCTION"> calcBKBline_quad
+					</tocitem>
+					<tocitem target="calcBKBtriang_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBtriang_Lin
+					</tocitem>
+					<tocitem target="calcBKBtriang_quad_help.html" image="HelpIcon.FUNCTION"> calcBKBtriang_quad
+					</tocitem>
+					<tocitem target="calcBKBQuad_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBQuad_Lin
+					</tocitem>
+					<tocitem target="calcBKBQuad_quad_9_help.html" image="HelpIcon.FUNCTION"> calcBKBQuad_quad_9
+					</tocitem>
+					<tocitem target="calcBKBPrism_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBPrism_Lin
+					</tocitem>
+					<tocitem target="calcBKBPrism_quad_help.html" image="HelpIcon.FUNCTION"> calcBKBPrism_quad
+					</tocitem>
+					<tocitem target="calcBKBHex_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBHex_Lin
+					</tocitem>
+					<tocitem target="calcBKBHex_quad_27_help.html" image="HelpIcon.FUNCTION"> calcBKBHex_quad_27
+					</tocitem>
+				</tocitem>
 				<tocitem target="integr_order_help.html" image="HelpIcon.FUNCTION"> integr_order
 				</tocitem>
 				<tocitem target="initialize_BEM_help.html" image="HelpIcon.FUNCTION"> initialize_BEM
@@ -121,28 +145,6 @@
 					<tocitem target="shapeDerivHex_Lin_help.html" image="HelpIcon.FUNCTION"> shapeDerivHex_Lin
 					</tocitem>
 					<tocitem target="shapeDerivHex_quad_27_help.html" image="HelpIcon.FUNCTION"> shapeDerivHex_quad_27
-					</tocitem>
-				</tocitem>
-				<tocitem target="calcBKB_help.html" image="HelpIcon.FUNCTION"> calcBKB_help
-					<tocitem target="calcBKBline_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBline_Lin
-					</tocitem>
-					<tocitem target="calcBKBline_quad_help.html" image="HelpIcon.FUNCTION"> calcBKBline_quad
-					</tocitem>
-					<tocitem target="calcBKBtriang_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBtriang_Lin
-					</tocitem>
-					<tocitem target="calcBKBtriang_quad_help.html" image="HelpIcon.FUNCTION"> calcBKBtriang_quad
-					</tocitem>
-					<tocitem target="calcBKBQuad_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBQuad_Lin
-					</tocitem>
-					<tocitem target="calcBKBQuad_quad_9_help.html" image="HelpIcon.FUNCTION"> calcBKBQuad_quad_9
-					</tocitem>
-					<tocitem target="calcBKBPrism_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBPrism_Lin
-					</tocitem>
-					<tocitem target="calcBKBPrism_quad_help.html" image="HelpIcon.FUNCTION"> calcBKBPrism_quad
-					</tocitem>
-					<tocitem target="calcBKBHex_Lin_help.html" image="HelpIcon.FUNCTION"> calcBKBHex_Lin
-					</tocitem>
-					<tocitem target="calcBKBHex_quad_27_help.html" image="HelpIcon.FUNCTION"> calcBKBHex_quad_27
 					</tocitem>
 				</tocitem>
 			</tocitem>
