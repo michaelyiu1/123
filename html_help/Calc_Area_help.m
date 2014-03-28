@@ -1,4 +1,9 @@
 %% Calc_Area
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
+%
 % Computes the area of 2D mesh elements in a vectorized manner. It workds
 % for triangular and quadrilateral elements of any order. However the sides
 % of the elements must be striaght lines otherwise the calculation will be
@@ -48,3 +53,8 @@ hold on
 for i = 1:size(cc, 1)
     text(cc(i,1),cc(i,2),num2str(A(i,1)),'HorizontalAlignment','center')
 end
+%%
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

@@ -1,4 +1,7 @@
 %% Calc_Barycenters
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the barycenters of mesh elements in a
 % vectorized fashion. It works for all element size and types and
@@ -42,3 +45,8 @@ cc = Calc_Barycenters(p,MSH);
 triplot(MSH, p(:,1), p(:,2))
 hold on
 plot(cc(:,1), cc(:,2),'or')
+%%
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

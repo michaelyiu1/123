@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Calc_Barycenters</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-22"><meta name="DC.source" content="Calc_Barycenters_help.m"><style type="text/css">
+      --><title>Calc_Barycenters</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-03-28"><meta name="DC.source" content="Calc_Barycenters_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,15 +65,18 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Calc_Barycenters</h1><!--introduction--><p>Computes the barycenters of mesh elements in a vectorized fashion. It works for all element size and types and dimensions.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output</a></li><li><a href="#4">Example</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>cc = Calc_Barycenters(p, MSH)</p><h2>Input:<a name="2"></a></h2><p><i><b>p</b></i> : [Np x 2] coordinates</p><p><i><b>MSH</b></i> : [Nel, Nsh] Mesh element ids. Nel is the number of elements and Nsh is the number of shapefunctions. The ids correspond to the row of the array <i><b>p</b></i></p><h2>Output<a name="3"></a></h2><p><i><b>cc</b></i>  : [Nel x dim] coordinates of the element barycenters</p><h2>Example<a name="4"></a></h2><p>Create a hypothetical mesh</p><pre class="codeinput">p = 10 * rand(10,2);
+  </style></head><body><div class="content"><h1>Calc_Barycenters</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="Tutorials">| msim_help_demos.html</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Computes the barycenters of mesh elements in a vectorized fashion. It works for all element size and types and dimensions.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input:</a></li><li><a href="#3">Output</a></li><li><a href="#4">Example</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>cc = Calc_Barycenters(p, MSH)</p><h2>Input:<a name="2"></a></h2><p><i><b>p</b></i> : [Np x 2] coordinates</p><p><i><b>MSH</b></i> : [Nel, Nsh] Mesh element ids. Nel is the number of elements and Nsh is the number of shapefunctions. The ids correspond to the row of the array <i><b>p</b></i></p><h2>Output<a name="3"></a></h2><p><i><b>cc</b></i>  : [Nel x dim] coordinates of the element barycenters</p><h2>Example<a name="4"></a></h2><p>Create a hypothetical mesh</p><pre class="codeinput">p = 10 * rand(10,2);
 MSH = delaunay(p(:,1), p(:,2));
 </pre><p>Calculate the barycenter of each element and plot</p><pre class="codeinput">cc = Calc_Barycenters(p,MSH);
 triplot(MSH, p(:,1), p(:,2))
 hold <span class="string">on</span>
 plot(cc(:,1), cc(:,2),<span class="string">'or'</span>)
-</pre><img vspace="5" hspace="5" src="Calc_Barycenters_help_01.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="Calc_Barycenters_help_01.png" alt=""> <p><a href="msim_help_main.html">| main</a>   <a href="Tutorials">| msim_help_demos.html</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Calc_Barycenters
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Computes the barycenters of mesh elements in a
 % vectorized fashion. It works for all element size and types and
@@ -117,5 +120,10 @@ cc = Calc_Barycenters(p,MSH);
 triplot(MSH, p(:,1), p(:,2))
 hold on
 plot(cc(:,1), cc(:,2),'or')
+%%
+% 
+% <msim_help_main.html | main>   <Tutorials | msim_help_demos.html> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
 ##### SOURCE END #####
 --></body></html>
