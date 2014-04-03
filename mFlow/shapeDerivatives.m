@@ -2,7 +2,7 @@ function [B Jdet]=shapeDerivatives(p, MSH, n, opt)
 % [B Jdet]=shapeDerivatives(p, MSH, n, opt)
 %
 % Computes the shape function derivatives and the determinant of the
-% Jacobian matrix
+% Jacobian matrix.
 %
 % Input
 % p   : [Np x 3] Coodrinates of nodes [x1 y1 z1; x2 y2 z2;...xn yn zn]
@@ -20,7 +20,7 @@ function [B Jdet]=shapeDerivatives(p, MSH, n, opt)
 % Output
 % B    : Shape function derivatives
 % Jdet : The determinant of the Jacobian Matrix 
-
+%
 % Version : 1.0
 % Author : George Kourakos
 % email: giorgk@gmail.com
