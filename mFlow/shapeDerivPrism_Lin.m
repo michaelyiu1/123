@@ -1,7 +1,9 @@
 function [B Jdet]=shapeDerivPrism_Lin(p,TRI,n)
-% [B Jdet]=shapeDerivPrism_Lin(p,TRI,n)
+% [B Jdet] = shapeDerivPrism_Lin(p, TRI, n)
+%
 % Computes the shape function derivatives and the determinant of the 
-% jacobian matrix for linear prism elements
+% jacobian matrix for linear prism elements.
+% This function is used internally from shapeDerivatives.
 % 
 % Input
 % p   : [Np x 3] Coodrinates of nodes [x1 y1 z1; x2 y2 z2;...xn yn zn]
@@ -15,6 +17,7 @@ function [B Jdet]=shapeDerivPrism_Lin(p,TRI,n)
 % Output
 % B    : Shape function derivatives
 % Jdet : The determinant of the Jacobian Matrix 
+%
 % Version : 1.0
 % Author : George Kourakos
 % email: giorgk@gmail.com
@@ -22,24 +25,26 @@ function [B Jdet]=shapeDerivPrism_Lin(p,TRI,n)
 % Date 18-Dec_2012
 % Department of Land Air and Water
 % University of California Davis
-
+%
 % N1=(1-xi-eta)*(1-zta)/2;
 % N2=xi*(1-zta)/2;
 % N3=eta*(1-zta)/2;
 % N4=(1-xi-eta)*(1+zta)/2;
 % N5=xi*(1+zta)/2;
 % N6=eta*(1+zta)/2;
-
-%B(:,1:6) are the derivative of shape function wtr to x, 
-%B(:,7:12) are the derivative of shape function wrt to y
-%B(:,13:18) are the derivative of shape function wrt to z
-
-%Jdet is the determinant of the Jacobian of isoparametric transformation.
-%Jdet is also the volume of each element
-
-%shape functions of prisms
-%N1=ksi*(1-zta)/2; N2=eta*(1-zta)/2; N3=(1-ksi-eta)*(1-zta)/2;
-%N4=ksi*(1+zta)/2; N5=eta*(1+zta)/2; N6=(1-ksi-eta)*(1+zta)/2;
+%
+% B(:,1:6) are the derivative of shape function wtr to x, 
+% B(:,7:12) are the derivative of shape function wrt to y
+% B(:,13:18) are the derivative of shape function wrt to z
+%
+% Jdet is the determinant of the Jacobian of isoparametric transformation.
+% Jdet is also the volume of each element
+%
+% shape functions of prisms
+% N1=ksi*(1-zta)/2; N2=eta*(1-zta)/2; N3=(1-ksi-eta)*(1-zta)/2;
+% N4=ksi*(1+zta)/2; N5=eta*(1+zta)/2; N6=(1-ksi-eta)*(1+zta)/2;
+%
+% see also shapeDerivatives
 
 xi=n(1,1);
 eta=n(1,2);
@@ -52,7 +57,7 @@ x5=p(TRI(:,5),1);y5=p(TRI(:,5),2);z5=p(TRI(:,5),3);
 x6=p(TRI(:,6),1);y6=p(TRI(:,6),2);z6=p(TRI(:,6),3);
 
 %Derivatives of shape functions with respect the parametric variables ksi,
-%hta and zta
+%eta and zta
 gn1 = 1/2 - zta/2;
 gn2 = 0;
 gn3 = zta/2 - 1/2;

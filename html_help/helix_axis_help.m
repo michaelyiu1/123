@@ -1,4 +1,7 @@
 %% helix_axis
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Generate points along a helix with axis defined by the points p1 p2.
 % The density of the points is controled by the Nlay, Nppl, rd parameters
@@ -43,3 +46,7 @@ rd = 100;
 plot3(xp, yp, zp, '.-')
 hold on
 plot3([p1(1) p2(1)], [p1(2) p2(2)], [p1(3) p2(3)],'.-r')
+%%
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

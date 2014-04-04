@@ -1,4 +1,7 @@
 %% mapElemto2D
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 % Projects triangles and quadrilaterals defined in the 3D space to the 2D space
 % while preserving the area and length sides of the original shape. This is
@@ -58,3 +61,7 @@ pdist([pxt'  pyt' pzt'])
 %%
 % The area correct area where the flux should be applied is
 polyarea(pxt',pyt')
+%%
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%

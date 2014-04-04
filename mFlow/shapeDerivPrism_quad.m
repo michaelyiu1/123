@@ -1,7 +1,9 @@
 function [B Jdet]=shapeDerivPrism_quad(p,MSH,n)
-% [B Jdet]=shapeDerivPrism_quad(p,MSH,n)
+% [B Jdet]=shapeDerivPrism_quad(p, MSH, n)
+%
 % Computes the shape function derivatives and the determinant of the 
-% jacobian matrix for quadratic prism elements
+% jacobian matrix for quadratic prism elements.
+% This function is used internally from shapeDerivatives.
 % 
 % Input
 % p   : [Np x 3] Coodrinates of nodes [x1 y1 z1; x2 y2 z2;...xn yn zn]
@@ -15,6 +17,7 @@ function [B Jdet]=shapeDerivPrism_quad(p,MSH,n)
 % Output
 % B    : Shape function derivatives
 % Jdet : The determinant of the Jacobian Matrix 
+%
 % Version : 1.0
 % Author : George Kourakos
 % email: giorgk@gmail.com
@@ -22,25 +25,27 @@ function [B Jdet]=shapeDerivPrism_quad(p,MSH,n)
 % Date : 18-Dec_2012
 % Department of Land Air and Water
 % University of California Davis
-
-% % N(1) = (xi*zta*(2*xi - 1)*(zta - 1))/2;
-% % N(2) = (eta*zta*(2*eta - 1)*(zta - 1))/2;
-% % N(3) = (zta*(zta - 1)*(eta + xi - 1)*(2*eta + 2*xi - 1))/2;
-% % N(4) = (xi*zta*(2*xi - 1)*(zta + 1))/2;
-% % N(5) = (eta*zta*(2*eta - 1)*(zta + 1))/2;
-% % N(6) = (zta*(zta + 1)*(eta + xi - 1)*(2*eta + 2*xi - 1))/2;
-% % N(7) = 2*eta*xi*zta*(zta - 1);
-% % N(8) = -2*eta*zta*(zta - 1)*(eta + xi - 1);
-% % N(9) = -(xi*zta*(zta - 1)*(4*eta + 4*xi - 4))/2;
-% % N(10) = 2*eta*xi*zta*(zta + 1);
-% % N(11) = -2*eta*zta*(zta + 1)*(eta + xi - 1);
-% % N(12) = -(xi*zta*(zta + 1)*(4*eta + 4*xi - 4))/2;
-% % N(13) = -xi*(2*xi - 1)*(zta^2 - 1);
-% % N(14) = -eta*(2*eta - 1)*(zta^2 - 1);
-% % N(15) = -(zta^2 - 1)*(eta + xi - 1)*(2*eta + 2*xi - 1);
-% % N(16) = -4*eta*xi*(zta^2 - 1);
-% % N(17) = 4*eta*(zta^2 - 1)*(eta + xi - 1);
-% % N(18) = xi*(zta^2 - 1)*(4*eta + 4*xi - 4);
+%
+% N(1) = (xi*zta*(2*xi - 1)*(zta - 1))/2;
+% N(2) = (eta*zta*(2*eta - 1)*(zta - 1))/2;
+% N(3) = (zta*(zta - 1)*(eta + xi - 1)*(2*eta + 2*xi - 1))/2;
+% N(4) = (xi*zta*(2*xi - 1)*(zta + 1))/2;
+% N(5) = (eta*zta*(2*eta - 1)*(zta + 1))/2;
+% N(6) = (zta*(zta + 1)*(eta + xi - 1)*(2*eta + 2*xi - 1))/2;
+% N(7) = 2*eta*xi*zta*(zta - 1);
+% N(8) = -2*eta*zta*(zta - 1)*(eta + xi - 1);
+% N(9) = -(xi*zta*(zta - 1)*(4*eta + 4*xi - 4))/2;
+% N(10) = 2*eta*xi*zta*(zta + 1);
+% N(11) = -2*eta*zta*(zta + 1)*(eta + xi - 1);
+% N(12) = -(xi*zta*(zta + 1)*(4*eta + 4*xi - 4))/2;
+% N(13) = -xi*(2*xi - 1)*(zta^2 - 1);
+% N(14) = -eta*(2*eta - 1)*(zta^2 - 1);
+% N(15) = -(zta^2 - 1)*(eta + xi - 1)*(2*eta + 2*xi - 1);
+% N(16) = -4*eta*xi*(zta^2 - 1);
+% N(17) = 4*eta*(zta^2 - 1)*(eta + xi - 1);
+% N(18) = xi*(zta^2 - 1)*(4*eta + 4*xi - 4);
+%
+% see also shapeDerivatives
 
 xi=n(1,1);
 eta=n(1,2);

@@ -65,6 +65,7 @@
 %
 % * <shapefunctions_help.html |shapefunctions|> - Computes the
 % shape functions
+% * <solve_system_help.html |solve_system|> - Solves the linear system
 %
 %% mTrans
 % * <ADE1Danalytical_help.html |ADE1Danalytical|> - Analytical solution of the ADE in 1D

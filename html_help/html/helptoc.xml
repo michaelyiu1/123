@@ -147,6 +147,8 @@
 				</tocitem>
 				<tocitem target="shapefunctions_help.html" image="HelpIcon.FUNCTION"> shapefunctions
 				</tocitem>
+				<tocitem target="solve_system_help.html" image="HelpIcon.FUNCTION"> solve_system
+				</tocitem>
 			</tocitem>
 			<tocitem target="msim_function_categories.html#2">mTrans
 				<tocitem target="ADE1Danalytical_help.html" image="HelpIcon.FUNCTION"> ADE1Danalytical
