@@ -26,18 +26,19 @@ For the mesh generation we rely on Gmsh generator, and for visualization we used
 
 
 * Developers:
+
 George Kourakos, e-mail: gkourakos@ucdavis.edu, giorgk@mail.com
 Thomas Harter,  e-mail thharter@ucdavis.edu
 
 
 * INSTALLATION
+
 For installation instructions see http://subsurface.gr/index.php/download
 
 
 
 * LICENSE (See LICENSE.txt file for terms and conditions)
+
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 (GPL-2.0) as published by the Free Software Foundation; http://opensource.org/licenses/gpl-2.0.php 
-
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
