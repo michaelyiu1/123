@@ -1,5 +1,5 @@
 function [p MSH]=read_2D_Gmsh(varargin)
-% [p MSH]=read_2D_Gmsh(filename)
+% [p MSH]=read_2D_Gmsh(varargin)
 %
 % Reads the *.msh file generated from Gmsh
 %
@@ -87,6 +87,7 @@ else
         tmp=fscanf(fid,'%f',3)';
         p(id,:)=tmp;
     end
+    Np = size(p,1);
 
     %read triangulation
     while 1

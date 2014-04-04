@@ -89,7 +89,7 @@
 			</tocitem>
 		</tocitem>
 		
-		<tocitem target="msim_function_categories.html" image="HelpIcon.FUNCTION"> Functions (incomplete)
+		<tocitem target="msim_function_categories.html" image="HelpIcon.FUNCTION"> Functions
 			<tocitem target="msim_function_categories.html#1">mFlow
 				<tocitem target="Assemble_LHS_help.html" image="HelpIcon.FUNCTION"> Assemble_LHS
 				</tocitem>
