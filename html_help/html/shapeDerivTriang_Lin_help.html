@@ -1,0 +1,131 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>shapeDerivTriang_Lin</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-03"><meta name="DC.source" content="shapeDerivTriang_Lin_help.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>shapeDerivTriang_Lin</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Computes the shape function derivatives and the determinant of the jacobian matrix for linear triangle elements. This function is used internally from <a href="shapeDerivatives_help.html">shapeDerivatives</a>.</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="http://groundwater.ucdavis.edu/msim">http://groundwater.ucdavis.edu/msim</a></p><p>Date 18-Mar-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input</a></li><li><a href="#3">Output</a></li><li><a href="#4">Shape functions</a></li><li><a href="#5">Derivatives of shape functions</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>[B Jdet]=shapeDerivTriang_Lin(p, MSH, n, proj)</p><h2>Input<a name="2"></a></h2><p><i><b>p</b></i>: [Np x 3] Coodrinates of nodes [x1 y1 z1; x2 y2 z2;...xn yn zn], where <i>Np</i> is the number of nodes</p><p><i><b>MSH</b></i>: [Nel x Np_el] id of elements. Each row correspond to an element. <i>Nel</i> is the number of elements and <i>Np_el</i> is the number of nodes to define the element</p><p><i><b>n</b></i>: the integration point where the derivatives will be evaluated.</p><p><i><b>proj</b></i> : if proj is true then the elements will be projected on the 2D plane before computing the determinant usign <a href="mapElemto2D_help.html">mapElemto2D</a></p><h2>Output<a name="3"></a></h2><p><i><b>B</b></i>: Shape function derivatives</p><p><i><b>Jdet</b></i>: The determinant of the Jacobian Matrix</p><h2>Shape functions<a name="4"></a></h2><p>N1 = ksi;</p><p>N2 = eta;</p><p>N3 = 1 - ksi - eta;</p><h2>Derivatives of shape functions<a name="5"></a></h2><p>dN1 = 1; dN2 = 0; dN3 = -1; (wrt. ksi)</p><p>dN4 = 0; dN5 = 1; dN6 = -1; (wrt. eta)</p><pre class="codeinput"><span class="comment">%</span>
+</pre><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% shapeDerivTriang_Lin
+% 
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
+%
+% Computes the shape function derivatives and the determinant of the 
+% jacobian matrix for linear triangle elements.
+% This function is used internally from <shapeDerivatives_help.html shapeDerivatives>.
+% 
+%
+% Version : 1.0
+%
+% Author : George Kourakos
+%
+% email: giorgk@gmail.com
+%
+% web : http://groundwater.ucdavis.edu/msim
+%
+% Date 18-Mar-2014
+%
+% Department of Land Air and Water
+%
+% University of California Davis
+%
+%% Usage
+% [B Jdet]=shapeDerivTriang_Lin(p, MSH, n, proj)
+%
+%% Input
+% _*p*_: [Np x 3] Coodrinates of nodes [x1 y1 z1; x2 y2 z2;...xn yn zn],
+% where _Np_ is the number of nodes
+%
+% _*MSH*_: [Nel x Np_el] id of elements. Each row correspond to an element.
+% _Nel_ is the number of elements and _Np_el_ is the number of nodes to define the element
+%
+% _*n*_: the integration point where the derivatives will be evaluated. 
+%
+% _*proj*_ : if proj is true then the elements will be projected on the 2D
+% plane before computing the determinant usign <mapElemto2D_help.html mapElemto2D>
+%% Output
+% _*B*_: Shape function derivatives
+%
+% _*Jdet*_: The determinant of the Jacobian Matrix 
+%
+%% Shape functions
+% N1 = ksi;
+%
+% N2 = eta;
+%
+% N3 = 1 - ksi - eta;
+%
+%% Derivatives of shape functions
+% dN1 = 1; dN2 = 0; dN3 = -1; (wrt. ksi)
+%
+% dN4 = 0; dN5 = 1; dN6 = -1; (wrt. eta)
+
+%
+%%
+% <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
+% <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
+%
+##### SOURCE END #####
+--></body></html>
