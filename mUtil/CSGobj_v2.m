@@ -536,7 +536,7 @@ classdef CSGobj_v2
                             thresh.DistMin=pnt(j,1).DistMin; thresh.DistMax=pnt(j,1).DistMax;
                             thresh.LcMin=pnt(j,1).LcMin; thresh.LcMax=pnt(j,1).LcMax;
                         end
-                        CSG.PS=CSG.PS.addnewpoint([Verts(i,1).X Verts(i,1).Y],thresh);
+                        CSG.PS=CSG.PS.addnewpoint([pnt(j,1).X pnt(j,1).Y],thresh);
                     end
                 end
             end
