@@ -52,11 +52,11 @@
 				</tocitem>
 			</tocitem>
 			
-			<tocitem target="twoD_examp.html">2D Examples (To be completed)
-				<tocitem target="twoD_exampflow.html">Flow simulation
-					<tocitem target="twoD_exampflow_tria.html">Triangular Elements
+			<tocitem target="twoD_examples_help.html">2D Examples (To be completed)
+				<tocitem target="twoD_examples_help.html">Flow simulation
+					<tocitem target="example_1_help.html">Triangular Elements
 					</tocitem>
-					<tocitem target="twoD_exampflow_quad.html">Quadrilateral Elements
+					<tocitem target="example_2_help.html">Quadrilateral Elements
 					</tocitem>
 				</tocitem>
 				<tocitem target="twoD_examptran.html">Transport simulation
@@ -202,6 +202,8 @@
 				<tocitem target="read_2D_Gmsh_help.html" image="HelpIcon.FUNCTION"> read_2D_Gmsh
 				</tocitem>
 				<tocitem target="readArcGisASCIIfile_help.html" image="HelpIcon.FUNCTION"> readArcGisASCIIfile
+				</tocitem>
+				<tocitem target="WriteAscii4Raster_help.html" image="HelpIcon.FUNCTION"> WriteAscii4Raster
 				</tocitem>
 				<tocitem target="WriteVtkMesh_help.html" image="HelpIcon.FUNCTION"> WriteVtkMesh
 				</tocitem>

@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Tutorials</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-15"><meta name="DC.source" content="msim_help_demos.m"><style type="text/css">
+      --><title>Examples in 2D</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-15"><meta name="DC.source" content="twoD_examples_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,43 +65,29 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Tutorials</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Any software, code or library can be as difficult as the authors chose to make it. This section attempts to smooth out the learning curve of the mSim tool.</p><!--/introduction--><p>To go through the tutorials we assume that users have basic knowledge of groundwater modeling. Familiarity with finite element is not required but it wont hurt either</p><p>mSim is written in Matlab therefore basic knownledge of matlab interface and basic commands will make the learning process smoother. If matlab terms such as arrays, structs, cells, functions, scripts, sound greek, it is highly recommended to go through the <a href="http://www.mathworks.com/help/matlab/getting-started-with-matlab.html">Getting Started with MATLAB</a> section first.</p><p>The Tutorials are organized as follows:</p><div><ul><li><a href="mesh_gen_main.html">Mesh generation</a></li><li><a href="oneD_examp.html">1D Examples</a></li><li><a href="twoD_examples_help.html">2D Examples</a></li><li><a href="threeD_examp.html">3D Examples</a></li><li><a href="partTrack_examp.html">Particle Tracking</a></li><li><a href="NPSAT_examp.html">Complete NPSAT example</a></li></ul></div><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Examples in 2D</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>In this section you can find few tutorials on how to use mSim functions for simulating steady state groundwater flow in 2D. The tutorials cover most of the type of elements, boundary conditions and stress types that one encounters in groundwater flow simulations.</p><div><ol><li><a href="example_1_help.html">Example 1</a> Triangular elements, constant head boundary conditions, general head boundary conditions, non-uniform diffuse groundwater recharge, uniform hydraulic conductivity</li><li><a href="example_2_help.html">Example 2</a> Quadrilateral elements, non-uniform hydraulic conductivity, lateral fluxes, quadratic elements</li></ol></div><!--/introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Tutorials
+%% Examples in 2D
 % 
 % <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
-%
-% Any software, code or library can be as difficult as the authors chose to
-% make it. This section attempts to smooth out the learning curve of the mSim tool.
-%%
-% To go through the tutorials we assume that users have basic
-% knowledge of groundwater modeling. Familiarity with finite element is
-% not required but it wont hurt either
-%%
-% mSim is written in Matlab therefore basic knownledge of matlab interface and basic commands
-% will make the learning process smoother.
-% If matlab terms such as arrays, structs, cells, functions, scripts, sound
-% greek, it is highly recommended to go through the 
-% <http://www.mathworks.com/help/matlab/getting-started-with-matlab.html
-% Getting Started with MATLAB> section first. 
-%%
-% The Tutorials are organized as follows:
-%
-% * <mesh_gen_main.html Mesh generation>
-% * <oneD_examp.html 1D Examples>
-% * <twoD_examples_help.html 2D Examples>
-% * <threeD_examp.html 3D Examples>
-% * <partTrack_examp.html Particle Tracking>
-% * <NPSAT_examp.html Complete NPSAT example>
-%
+% In this section you can find few tutorials on how to use mSim functions
+% for simulating steady state groundwater flow in 2D. The tutorials cover
+% most of the type of elements, boundary conditions and stress types that
+% one encounters in groundwater flow simulations.
+% 
+% # <example_1_help.html Example 1> Triangular elements, constant head
+% boundary conditions, general head boundary conditions, non-uniform diffuse 
+% groundwater recharge, uniform hydraulic conductivity 
+% # <example_2_help.html Example 2> Quadrilateral elements, non-uniform
+% hydraulic conductivity, lateral fluxes, quadratic elements
+%  
 %%
 % 
 % <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 
- 
 ##### SOURCE END #####
 --></body></html>

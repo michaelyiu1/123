@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Tutorials</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-15"><meta name="DC.source" content="msim_help_demos.m"><style type="text/css">
+      --><title>WriteAscii4Raster</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-15"><meta name="DC.source" content="WriteAscii4Raster_help.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,43 +65,60 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Tutorials</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Any software, code or library can be as difficult as the authors chose to make it. This section attempts to smooth out the learning curve of the mSim tool.</p><!--/introduction--><p>To go through the tutorials we assume that users have basic knowledge of groundwater modeling. Familiarity with finite element is not required but it wont hurt either</p><p>mSim is written in Matlab therefore basic knownledge of matlab interface and basic commands will make the learning process smoother. If matlab terms such as arrays, structs, cells, functions, scripts, sound greek, it is highly recommended to go through the <a href="http://www.mathworks.com/help/matlab/getting-started-with-matlab.html">Getting Started with MATLAB</a> section first.</p><p>The Tutorials are organized as follows:</p><div><ul><li><a href="mesh_gen_main.html">Mesh generation</a></li><li><a href="oneD_examp.html">1D Examples</a></li><li><a href="twoD_examples_help.html">2D Examples</a></li><li><a href="threeD_examp.html">3D Examples</a></li><li><a href="partTrack_examp.html">Particle Tracking</a></li><li><a href="NPSAT_examp.html">Complete NPSAT example</a></li></ul></div><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>WriteAscii4Raster</h1><!--introduction--><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p>Writes grid data to a suitable ascii format for <a href="https://www.arcgis.com/">ARCGIS</a> or <a href="http://www.qgis.org/">QGIS</a> import</p><p>Version : 1.0</p><p>Author : George Kourakos</p><p>email: <a href="mailto:giorgk@gmail.com">giorgk@gmail.com</a></p><p>web : <a href="www.surface.gr">www.surface.gr</a></p><p>Date 15-Apr-2014</p><p>Department of Land Air and Water</p><p>University of California Davis</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Usage</a></li><li><a href="#2">Input</a></li><li><a href="#3">Output</a></li></ul></div><h2>Usage<a name="1"></a></h2><p>WriteAscii4Raster(filename,TAB, xl, yl, csz, nodata)</p><h2>Input<a name="2"></a></h2><p><i><b>filename</b></i>: The name of the ascii file where the data wil be printed. The suffix <b>.asc</b> will be append at the end</p><p><i><b>TAB</b></i>: Data matrix</p><p><i><b>xl</b></i>: x coordinate of the left lower corner</p><p><i><b>yl</b></i>: y coordinate of the left lower corner</p><p><i><b>csz</b></i>: cell size</p><p><i><b>nodata</b></i>: Scalar that represents no data value. Do not use nan</p><p><b>Detailed explanation of the data can be found <a href="http://resources.esri.com/help/9.3/arcgisengine/java/GP_ToolRef/spatial_analyst_tools/esri_ascii_raster_format.htm">here</a></b></p><h2>Output<a name="3"></a></h2><p>No output to the matlab workspace. Just creates a file</p><p><a href="msim_help_main.html">| main</a>   <a href="msim_help_demos.html">| Tutorials</a> <a href="msim_function_categories.html">| Functions</a> <a href="http://www.subsurface.gr">| website</a> |</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Tutorials
+%% WriteAscii4Raster
 % 
 % <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
+% Writes grid data to a suitable ascii format for 
+% <https://www.arcgis.com/ ARCGIS> or 
+% <http://www.qgis.org/ QGIS> import 
 %
-% Any software, code or library can be as difficult as the authors chose to
-% make it. This section attempts to smooth out the learning curve of the mSim tool.
-%%
-% To go through the tutorials we assume that users have basic
-% knowledge of groundwater modeling. Familiarity with finite element is
-% not required but it wont hurt either
-%%
-% mSim is written in Matlab therefore basic knownledge of matlab interface and basic commands
-% will make the learning process smoother.
-% If matlab terms such as arrays, structs, cells, functions, scripts, sound
-% greek, it is highly recommended to go through the 
-% <http://www.mathworks.com/help/matlab/getting-started-with-matlab.html
-% Getting Started with MATLAB> section first. 
-%%
-% The Tutorials are organized as follows:
 %
-% * <mesh_gen_main.html Mesh generation>
-% * <oneD_examp.html 1D Examples>
-% * <twoD_examples_help.html 2D Examples>
-% * <threeD_examp.html 3D Examples>
-% * <partTrack_examp.html Particle Tracking>
-% * <NPSAT_examp.html Complete NPSAT example>
+% Version : 1.0
+%
+% Author : George Kourakos
+%
+% email: giorgk@gmail.com
+%
+% web : <www.surface.gr www.surface.gr>
+%
+% Date 15-Apr-2014
+%
+% Department of Land Air and Water
+%
+% University of California Davis
+%
+%% Usage
+% WriteAscii4Raster(filename,TAB, xl, yl, csz, nodata)
+%
+%% Input
+% _*filename*_: The name of the ascii file where the data wil be printed.
+% The suffix *.asc* will be append at the end
+%
+% _*TAB*_: Data matrix
+%
+% _*xl*_: x coordinate of the left lower corner
+%
+% _*yl*_: y coordinate of the left lower corner
+%
+% _*csz*_: cell size
+%
+% _*nodata*_: Scalar that represents no data value. Do not use nan
+%
+% *Detailed explanation of the data can be found 
+% <http://resources.esri.com/help/9.3/arcgisengine/java/GP_ToolRef/spatial_analyst_tools/esri_ascii_raster_format.htm
+% here>*
+%
+%%  Output
+% No output to the matlab workspace. Just creates a file
 %
 %%
 % 
 % <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
-
- 
 ##### SOURCE END #####
 --></body></html>

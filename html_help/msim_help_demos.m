@@ -22,7 +22,7 @@
 %
 % * <mesh_gen_main.html Mesh generation>
 % * <oneD_examp.html 1D Examples>
-% * <twoD_examp.html 2D Examples>
+% * <twoD_examples_help.html 2D Examples>
 % * <threeD_examp.html 3D Examples>
 % * <partTrack_examp.html Particle Tracking>
 % * <NPSAT_examp.html Complete NPSAT example>
