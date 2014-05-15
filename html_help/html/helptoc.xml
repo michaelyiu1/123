@@ -52,21 +52,17 @@
 				</tocitem>
 			</tocitem>
 			
-			<tocitem target="twoD_examples_help.html">2D Examples (To be completed)
+			<tocitem target="twoD_examples_help.html">2D Examples
 				<tocitem target="twoD_examples_help.html">Flow simulation
 					<tocitem target="example_1_help.html">Triangular Elements
 					</tocitem>
 					<tocitem target="example_2_help.html">Quadrilateral Elements
 					</tocitem>
 				</tocitem>
-				<tocitem target="twoD_examptran.html">Transport simulation
-				</tocitem>
 			</tocitem>
 			
-			<tocitem target="hexa_flow.html">3D Examples (To be completed)
-				<tocitem target="hexa_flow.html#1">Flow simulation
-				</tocitem>
-				<tocitem target="threeD_examp.html#2">Transport simulation
+			<tocitem target="hexa_flow.html">3D Examples
+				<tocitem target="threeD_flow1_help.html">Flow simulation
 				</tocitem>
 			</tocitem>
 
