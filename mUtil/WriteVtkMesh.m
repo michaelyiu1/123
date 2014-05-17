@@ -52,7 +52,7 @@ Np=size(p,1);
 Nel=size(MSH,1);
 fid=fopen([filename '.vtk'],'w');
 fprintf(fid,'# vtk DataFile Version 3.0\n');
-fprintf(fid,'write mesh on file\n');
+fprintf(fid,'vtk output\n');
 fprintf(fid,'ASCII\n');
 fprintf(fid,'DATASET UNSTRUCTURED_GRID\n');
 fprintf(fid,'POINTS %i double\n', Np);
