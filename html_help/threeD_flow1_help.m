@@ -6,16 +6,16 @@
 % This example shows how to solve the groundwater flow equation using hexahedral
 % elements. Here we choose quadratic elements however the procedure will be
 % almost identical for linear elements. We also show how to deal with
-% non-linear unconfine problems using the moving mesh approach.
+% non-linear unconfined problems using a moving mesh approach.
 % Finally we will show how to define general head boundary conditions
 % and lateral flow boundaries.
 %% Create 3D mesh
 % The domain of the problem is given in a  <mesh_withquads.html
 % previous tutorial>. In this example  we will use the same mesh  that
 % was generated for the 2D <example_2_help.html flow problem>. However
-% in this example the mesh will be extruded in the z direction.
+% we need to extrude the mesh in the z direction.
 %% 
-% Here we simply read the mesh from the _Simple_quad.msh_ file.
+% First we read the mesh from the _Simple_quad.msh_ file.
 [p_2d MSH_2d]=read_2D_Gmsh('Simple_quad');
 %%
 % Next we define the bottom and top elevation of the domain as inline
@@ -23,11 +23,11 @@
 top_func = @(x,y)30 - 0.01.*x + 0.04.*y;
 bot_func = @(x,y)-20 - 0.02.*x - 0.01.*y;
 %%
-% and we use them to compute the bottom and top elevations of the mesh nodes.
+% and use the inline functions to compute the bottom and top elevations of the mesh nodes.
 p_top = top_func(p_2d(:,1), p_2d(:,2));
 p_bot = bot_func(p_2d(:,1), p_2d(:,2));
 %%
-% Finaly we plot them to make sure we have made the correct calculations
+% We can also plot them to make sure we have made the correct calculations
 plot3(p_2d(:,1), p_2d(:,2), p_top, '.r')
 hold on
 plot3(p_2d(:,1), p_2d(:,2), p_bot, '.g')
@@ -39,13 +39,13 @@ grid on
 % distribution of 5 layers. For more advance options see the example of the
 % <Centerfor2points_help.html Centerfor2points> function.
 %%%
-% The simplest way to define uniform distribution is with the help of the
+% A simple way to define uniform distribution in Matlab is to use the
 % <http://www.mathworks.com/help/matlab/ref/linspace.html linspace>
 % function. The following line does two things. First the size of variable
 % *t* determines the number of layers. The size is equal to 6 therefore after
 % the extrude operation there will be 5 layers of 3D elements. The second
 % thing is that it defines the distribution of the layers. For every mesh 
-% node it will scale the elevations of 6 nodes according to the distribution in t. 
+% the elevations of the 6 layers will be scaled according to the distribution in t. 
 t = linspace(0,1,6);
 %%
 % Finally we extrude the mesh
@@ -79,15 +79,15 @@ K = [Kx Kx/10 Kx/100];
 % top right corner.
 %% 
 % For the general head boundary conditions we will find the mesh node ids
-% of the most left boundary which have zero x coordinate.
-id=find(abs(p(:,1)<1));
+% of the leftmost boundary which have zero x coordinate.
+id = find(abs(p(:,1)<1));
 %%
-% We assing head value equal to the initial elevation and conductance 
-% a relatively small value equal to 50 m^3/day.
-GHB=[id top_func(p(id,1),p(id,2)) 50*ones(length(id),1)];
+% We assing head value equal to the initial elevation and 
+% a relatively small value of 50 m^3/day for conductance.
+GHB = [id top_func( p(id,1), p(id,2) ) 50*ones(length(id),1)];
 %% 
-% Because we don't have any constant head boundary conditions we need to
-% define an empty variable
+% Because we do not have any constant head boundary conditions we need to
+% define an empty variable for that.
 CH = [];
 %% Flux boundary conditions
 % *WELLS*
@@ -101,16 +101,15 @@ CH = [];
 xw=[255 750 413 758 261];
 yw=[802 738 514 293 192];
 %%
-% We also arbitarily set the top of the well screen 10 m
-% bellow the initial water table, which is the top
-% layer and the screen lenght equal to 30 m.
+% We also arbitarily set the top of the well screen to 10 m
+% bellow the initial water table and the screen lenght equal to 30 m.
 %%
 % We define an empty variable that will hold the well rates.
 FLUX_point = [];
 %%
 % The following loop does the folowing. For each well computes the distance 
 % between the well and the mesh nodes. However when we created the quadrilateral mesh
-%  we didnt force the mesh to use the wells as mesh nodes.
+% we didnt force the mesh to use the wells as mesh nodes.
 % Therefore we will assume that the wells correspond to the closest nodes.
 % First we identify the minimum distance between each well and the mesh nodes and
 % select all nodes that their distance is equal to the minimum. The number
@@ -118,8 +117,8 @@ FLUX_point = [];
 % or 2*Nlay - 1 in case of quadratic elements. In our case we defined 6
 % layers therefore for each well we should select 11 nodes.
 %%
-% Next we compute the elevation of the top and bottom of the
-% screen and identify which nodes lay within the well screen and finally
+% Next we compute the elevation of the top and bottom of the well
+% screen and identify which nodes are within the well screen and finally
 % assign a well rate of 100 m^3/day for each well, i.e. we divide the
 % well pumping rate by the number of mesh nodes that lay between the well
 % screen.
@@ -148,8 +147,8 @@ MSH(3,1).elem(2,1).type
 %%
 % we see that there are 2 rows which contain elements of type quad. This is
 % because we extruded a quadrilateral mesh to form a hexahedral mesh. If we
-% extrude a 2D triangular mesh this structure will have two rows with one of them
-% with type triangle. 
+% extrude a 2D triangular mesh this structure will have two rows but one of them
+% would be triangle type. 
 %%%
 % The second row of this structure contains the id of the top and bottom 
 % mesh which can be either quadrilateral or triangular and
@@ -187,13 +186,13 @@ id_top = find(sum(test ,2) == 9);
 FLUX(1,1).id = id_top; 
 %%%
 % The recharge values for each element. Note that the order of the values
-% should correspnd to the order of ids if the recharge is heterogeneous
+% should correspond to the order of ids when the recharge is heterogeneous
 FLUX(1,1).val = 0.0008*ones(size(FLUX(1,1).id,1),1);
 %%%
 % The dimension of the elements
 FLUX(1,1).dim = 2; 
 %%%
-% The type pf the elements
+% The type of the elements
 FLUX(1,1).el_type = 'quad'; 
 %%%
 % The element order
@@ -226,7 +225,7 @@ FLUX(2,1).el_type = 'quad';
 FLUX(2,1).el_order = 'quadratic_9';
 FLUX(2,1).id_el = 1;
 %%
-% This property is a new one. It simply states that the value in
+% The next field is a new one. It simply states that the value in
 % FLUX(2,1).val is applied over the actual area of the element regardless
 % its orientation.
 FLUX(2,1).project = 1;
@@ -234,13 +233,14 @@ FLUX(2,1).project = 1;
 % The following plot explains graphically the difference between to two
 % options. When project is equal to zero we assume that the direction of
 % flow is vertical. When project is set equal to 1 then the flow direction is normal to the element face.
-% Ommiting the project field is ok but it will get 0 value
+% Ommiting the project field does not generate an error but it will get 0
+% value by default.
 %%
 % 
 % <<project_plot.png>>
 % 
 %%
-% For the second lateral flow boundary we will do exactly as above using a
+% For the second lateral flow boundary we will do exactly the same using a
 % different condition
 clear test
 for k=1:4
@@ -258,12 +258,12 @@ FLUX(3,1).project = 1;
 % Now we are ready to assemble the RHS. Since we use GHB the actuall 
 % degrees of freedom is the number of descritization nodes plus the number of GHB nodes 
 N_tot = size(p, 1) + size(GHB, 1); 
- F= Assemble_RHS(N_tot, p, MSH, FLUX);
+F= Assemble_RHS(N_tot, p, MSH, FLUX);
 F_w = zeros(length(F),1);
 F_w(FLUX_point(:,1), 1) = FLUX_point(:,2);
 %% 
 % As the models get more and more  complex it becomes very important to verify that we have
-% select the right nodes and elements to apply the boundary conditions conditions
+% selected the right nodes and elements to apply the boundary conditions conditions
 plot3(p(:,1), p(:,2), p(:,3),'.')
 hold on
 id = F > 0;
