@@ -29,6 +29,10 @@ end
 
 [nr nc]=size(TAB);
 fid=fopen([filename '.asc'],'w');
+if fid < 0
+    error(['Cannot create the file "' [filename '.asc'] '"' ])
+    return
+end
 fprintf(fid,'NCOLS %g\n',nc);
 fprintf(fid,'NROWS %g\n',nr);
 fprintf(fid,'XLLCORNER %f\n',xl);
