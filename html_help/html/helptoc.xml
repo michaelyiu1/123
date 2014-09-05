@@ -79,8 +79,8 @@
 				</tocitem>
 			</tocitem>
 			
-			<tocitem target="partTrack_demos.html">Particle Tracking
-				<tocitem target="partTrack_comparison_deom.html">Comparison of Particle tracking modes
+			<tocitem target="partTrack_examp.html">Particle Tracking
+				<tocitem target="Compare_partTrack_modes.html">Comparison of Particle tracking modes
 				</tocitem>
 			</tocitem>
 		</tocitem>
@@ -192,6 +192,8 @@
 				<tocitem target="iscw_help.html" image="HelpIcon.FUNCTION"> iscw
 				</tocitem>
 				<tocitem target="mapElemto2D_help.html" image="HelpIcon.FUNCTION"> mapElemto2D
+				</tocitem>
+				<tocitem target="msim_compile_help.html" image="HelpIcon.FUNCTION"> msim_compile
 				</tocitem>
 				<tocitem target="msim_mesh_options_help.html" image="HelpIcon.FUNCTION"> msim_mesh_options
 				</tocitem>
