@@ -9,7 +9,6 @@ classdef CSGobj_v2
     end
     
     methods
-
         %initialize object
         function CSG=CSGobj_v2(Dim,Npoly,Nline,Npoints,usertol)
             %Dim dimension of points
