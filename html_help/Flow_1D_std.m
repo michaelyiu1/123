@@ -1,8 +1,10 @@
 %% Flow simulation in 1D
-% 
 % <msim_help_main.html | main>   <msim_help_demos.html | Tutorials> 
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
+% This is a simple example on how to use the msim functions to solve the
+% groundwater flow equations for 1D domains
+%% Problem Description
 % The domain a 10 km line. The left boundary is a specified constant head
 % and the right side is a specified flux. In addition we assume uniform
 % recharge.

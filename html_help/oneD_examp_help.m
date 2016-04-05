@@ -8,7 +8,7 @@
 % interesting application here is the solution of the 1D ADE which 
 % is presented next
 %
-% # <Flow_1D_help.html Flow problem> Here we solve the groundwater flow
+% # <Flow_1D_std.html Flow problem> Here we solve the groundwater flow
 % equation for a simple 1D domain.
 % # <Transport_1D_help.html ADE problem> Next we present how to solve 1D
 % ADE and do a sensitivity analysis of the various parameters of the ADE. 

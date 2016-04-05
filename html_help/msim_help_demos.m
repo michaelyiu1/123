@@ -21,7 +21,7 @@
 % The Tutorials are organized as follows:
 %
 % * <mesh_gen_main.html Mesh generation>
-% * <oneD_examp.html 1D Examples>
+% * <oneD_examp_help.html 1D Examples>
 % * <twoD_examples_help.html 2D Examples>
 % * <threeD_examples_help.html 3D Examples>
 % * <partTrack_examp.html Particle Tracking>
