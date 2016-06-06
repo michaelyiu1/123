@@ -1,12 +1,4 @@
-                      _/_/_/_/
-    	            _/          _/
-    _/_/  _/_/_/   _/               _/_/  _/_/_/ 
-   _/  _/_/  _/   _/_/_/_/    _/   _/  _/_/  _/
-  _/   _/   _/          _/   _/   _/   _/   _/
- _/        _/          _/   _/   _/        _/
-_/        _/    _/_/_/_/   _/   _/        _/
-
-
+mSim Toolbox
 
 * Description
 
@@ -33,7 +25,7 @@ Thomas Harter,  e-mail thharter@ucdavis.edu
 
 * INSTALLATION
 
-For installation instructions see http://subsurface.gr/index.php/download
+For installation instructions see http://subsurface.gr/software/msim/msim-download/
 
 
 
