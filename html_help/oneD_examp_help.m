@@ -10,7 +10,7 @@
 %
 % # <Flow_1D_std.html Flow problem> Here we solve the groundwater flow
 % equation for a simple 1D domain.
-% # <Transport_1D_help.html ADE problem> Next we present how to solve 1D
+% # <transp_1D_std.html ADE problem> Next we present how to solve 1D
 % ADE and do a sensitivity analysis of the various parameters of the ADE. 
 %  
 %%

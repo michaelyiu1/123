@@ -179,51 +179,6 @@ axis([0 150 0 50])
 % Next lets define some other transport properties as function of x. 
 % Note that typically these do not make sence in real cases end we do 
 % that for illustration purposes.
-%
-% Let the longitudinal dispersivity be a linear function of x which varies 
-% from 200 m at the inlet to 5000 m at the outlet.
-aL_fnc = inline('200+x*0.96');
-%%
-% Again we solve this in similar way
-[Dglo Mglo c]= Assemble_LHS_std(p, MSH(2,1).elem(1,1).id,...
-                aL_fnc(p), V_fnc(p), rho_b, K_d, lambda, theta, Dm, CC, opt);
-C_aL = SteadyFlowTransport(Mglo, Dglo, F, Cinit, T, c, wmega);
-%%
-% Finally Now lets define a variable decay. We assume that the decay 
-% is zero for the first half of the domain and then equals to 30 years half-life.
-lmd_fnc = inline('(x>2500)*log(2)/(30*365)');
-[Dglo Mglo c]= Assemble_LHS_std(p, MSH(2,1).elem(1,1).id,...
-                aL_fnc(p), V_fnc(p), rho_b, K_d, lmd_fnc(p), theta, Dm, CC, opt);
-C_lmd = SteadyFlowTransport(Mglo, Dglo, F, Cinit, T, c, wmega);
-%%
-% To code below plots the above results
-figure('Position',[100 100 560 420])
-subplot(2,2,1);
-surf(p/1000,T(2:end)/365,C_aL,'edgecolor','none')
-view(0,90)
-axis([0 5 0 150])
-xlabel('Distance [km]')
-ylabel('Time [years]')
-title('... and Variable Dispersivity')
-colorbar
-subplot(2,2,2);
-surf(p/1000,T(2:end)/365,C_lmd,'edgecolor','none')
-view(0,90)
-axis([0 5 0 150])
-xlabel('Distance [km]')
-ylabel('Time [years]')
-title('... and Variable Decay')
-colorbar
-subplot(2,2,3);
-plot(T(2:end)/365,C_aL(:,end))
-xlabel('Time [years]')
-ylabel('Concentration at the outlet [mg/L]')
-axis([0 150 0 50])
-subplot(2,2,4);
-plot(T(2:end)/365,C_lmd(:,end))
-xlabel('Time [years]')
-ylabel('Concentration at the outlet [mg/L]')
-axis([0 150 0 50])
 
 %%
 % 
