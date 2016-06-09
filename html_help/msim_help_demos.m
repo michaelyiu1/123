@@ -26,6 +26,7 @@
 % * <threeD_examples_help.html 3D Examples>
 % * <partTrack_examp.html Particle Tracking>
 % * <NPSAT_examp.html Complete NPSAT example>
+% * <Coastal_Aquifer.html Coastal Aquifer Simulation using mSim> (that's possible)
 %
 %%
 % 

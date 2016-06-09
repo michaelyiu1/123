@@ -13,6 +13,9 @@
 % groundwater recharge, uniform hydraulic conductivity 
 % # <example_2_help.html Example 2> Quadrilateral elements, non-uniform
 % hydraulic conductivity, lateral fluxes, quadratic elements
+% # <Coastal_Aquifer.html Coastal Aquifer Simulation> This is a real world
+% example that uses the 2D groundwater flow equation to simulate the
+% seawater intrusion based on the sharp interface approxination
 %  
 %%
 % 
