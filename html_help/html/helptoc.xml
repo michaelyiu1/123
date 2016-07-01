@@ -68,16 +68,20 @@
 				</tocitem>
 			</tocitem>
 
-			<tocitem target="NPSAT_examp.html">NPSAT Example
-				<tocitem target="NPSAT_examp.html#1">Problem Definition
+			<tocitem target="NPSAT_exampl_box.html">NPSAT Example
+				<tocitem target="NPSAT_exampl_box.html#1">Problem description
 				</tocitem>
-				<tocitem target="NPSAT_examp.html#2">Flow Simulation
+				<tocitem target="NPSAT_exampl_box.html#2">Mesh generation
 				</tocitem>
-				<tocitem target="NPSAT_examp.html#3">Particle Tracking
+				<tocitem target="NPSAT_exampl_box.html#3">Flow Simulation
 				</tocitem>
-				<tocitem target="NPSAT_examp1.html">URF Computation
+				<tocitem target="NPSAT_exampl_box.html#4">Unconfine flow simulation
 				</tocitem>
-				<tocitem target="NPSAT_examp2.html">Prediction Phase
+				<tocitem target="NPSAT_exampl_box.html#5">Particle Tracking
+				</tocitem>
+				<tocitem target="NPSAT_exampl_box.html#6">Compute URFs
+				</tocitem>
+				<tocitem target="NPSAT_exampl_box.html#7">Forward implementation
 				</tocitem>
 			</tocitem>
 			

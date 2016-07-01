@@ -4,7 +4,7 @@
 % <msim_function_categories.html | Functions> <http://www.subsurface.gr | website> |
 %
 %
-% Any software, code or library can be as difficult as the authors chose to
+% Any software, code or library can be as difficult as the authors choose to
 % make it. This section attempts to smooth out the learning curve of the mSim tool.
 %%
 % To go through the tutorials we assume that users have basic
@@ -25,7 +25,7 @@
 % * <twoD_examples_help.html 2D Examples>
 % * <threeD_examples_help.html 3D Examples>
 % * <partTrack_examp.html Particle Tracking>
-% * <NPSAT_examp.html Complete NPSAT example>
+% * <NPSAT_exampl_box.html Complete NPSAT example>
 % * <Coastal_Aquifer.html Coastal Aquifer Simulation using mSim> (that's possible)
 %
 %%
