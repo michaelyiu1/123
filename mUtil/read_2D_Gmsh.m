@@ -73,96 +73,126 @@ if Use_Cpp
 else
     display('Reading points...');
     fid=fopen([filename '.msh'],'r');
+    
     while 1
         temp=fgetl(fid);
-        if strcmp(temp,'$Nodes') || strcmp(temp,'$NOD');
+        if strcmp(temp,'$MeshFormat')
+            temp = fscanf(fid, '%d', 3);
+            GMSHVersion = floor(temp(1));
             break
         end
     end
-
-    Nnd=fscanf(fid,'%i',1);
-    p=zeros(Nnd,3);
-    for i=1:Nnd
-        id=fscanf(fid,'%i',1);
-        tmp=fscanf(fid,'%f',3)';
-        p(id,:)=tmp;
+    
+    while 1
+        temp=fgetl(fid);
+        if strcmp(temp,'$Nodes') || strcmp(temp,'$NOD')
+            break
+        end
     end
+    
+    
+    if GMSHVersion == 2
+        Nnd=fscanf(fid,'%d',1);
+        p=zeros(Nnd,3);
+        for i=1:Nnd
+            id=fscanf(fid,'%d',1);
+            tmp=fscanf(fid,'%f',3)';
+            p(id,:)=tmp;
+        end
+    elseif GMSHVersion == 4
+        temp = fscanf(fid,'%d',2);
+        Nentities = temp(1);
+        Nnd = temp(2);
+        p=zeros(Nnd,3);
+        for ii = 1:Nentities
+           temp = fscanf(fid,'%d',4);
+           n = temp(4); % number of nodes per entity
+           for jj = 1:n
+               id=fscanf(fid,'%d',1);
+               tmp=fscanf(fid,'%f',3)';
+               p(id,:)=tmp;
+           end
+        end
+    end
+    
     Np = size(p,1);
 
     %read triangulation
     while 1
         temp=fgetl(fid);
-        if strcmp(temp,'$Elements') || strcmp(temp,'$ELM');
+        if strcmp(temp,'$Elements') || strcmp(temp,'$ELM')
             break
         end
     end
-    Nel=fscanf(fid,'%i',1);
+    
+    if GMSHVersion == 2
+        Nel=fscanf(fid,'%d',1);
+        Nentities = 1;
+    elseif GMSHVersion == 4
+        temp = fscanf(fid,'%d',2);
+        Nentities = temp(1);
+        Nel = temp(2);
+    end
+    
     TEMP=nan(Nel,30);TEMP_dom=nan(Nel,1);
     cnt=1;
-    display('Reading Elements...');
-    for i=1:Nel
-        if display_count
-            [i Nel] 
+    disp('Reading Elements...');
+    for j = 1:Nentities %% loop through entinties
+        if GMSHVersion == 2
+            n = Nel;  % for version 2 the hypothetical entity is supposed to hold Nel elements and the entity code will be read later
+        elseif GMSHVersion == 4
+            temp = fscanf(fid,'%d',4); 
+            n = temp(4);
+            elcode = temp(3);
         end
-        temp=fgetl(fid);
-        while isempty(temp)
+        
+        for i = 1:n
             temp=fgetl(fid);
-        end
-        A=textscan(temp,'%s');
-        if str2double(A{1,1}{2,1})==15
-            TEMP(cnt,1:2)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
+            while isempty(temp)
+                temp=fgetl(fid);
             end
-            cnt=cnt+1;
-        elseif str2double(A{1,1}{2,1})==1
-            TEMP(cnt,1:3)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
+            A=textscan(temp,'%s');
+            if GMSHVersion == 2
+               elcode = str2double(A{1,1}{2,1});
+%                eln = 1;
+%            elseif GMSHVersion == 4
+%                A=textscan(temp,'%s');
+%                elcode = str2double(B{1,1}{3,1});
+%                eln = str2double(B{1,1}{3,1});
             end
-            cnt=cnt+1;
-        elseif str2double(A{1,1}{2,1})==2;
-            TEMP(cnt,1:4)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
-            end
-           cnt=cnt+1;
-        elseif str2double(A{1,1}{2,1})==3;
-            TEMP(cnt,1:5)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
-            end
-           cnt=cnt+1;
-       elseif str2double(A{1,1}{2,1})==8;
-            TEMP(cnt,1:4)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
-            end
-           cnt=cnt+1;
-        elseif str2double(A{1,1}{2,1})==9;
-            TEMP(cnt,1:7)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-5,1}) str2double(A{1,1}{end-4,1}) str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1})...
-                          str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
-            end
-            cnt=cnt+1;
-       elseif str2double(A{1,1}{2,1})==10;
-            TEMP(cnt,1:10)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-8,1}) str2double(A{1,1}{end-7,1}) str2double(A{1,1}{end-6,1}) str2double(A{1,1}{end-5,1})...
-                          str2double(A{1,1}{end-4,1}) str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
-            end 
-            cnt=cnt+1;
-       elseif str2double(A{1,1}{2,1})==16;
-            TEMP(cnt,1:9)=[str2double(A{1,1}{2,1}) str2double(A{1,1}{end-7,1}) str2double(A{1,1}{end-6,1}) str2double(A{1,1}{end-5,1}) str2double(A{1,1}{end-4,1})...
-                          str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
-            if str2double(A{1,1}{3,1})>2
-                TEMP_dom(cnt,1)=str2double(A{1,1}{7,1});
-            end
-            cnt=cnt+1;
-        end
 
+               
+            if elcode == 15
+               TEMP(cnt,1:2) = [elcode str2double(A{1,1}{end,1})];
+               cnt=cnt+1;
+             elseif elcode == 1
+               TEMP(cnt,1:3) = [elcode str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+               cnt=cnt+1;
+            elseif elcode == 2
+                TEMP(cnt,1:4)=[elcode str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+                cnt=cnt+1;
+            elseif elcode == 3
+                TEMP(cnt,1:5)=[elcode str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+                cnt=cnt+1;
+            elseif elcode == 8
+                TEMP(cnt,1:4)=[elcode str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+                cnt=cnt+1;
+            elseif elcode == 9
+                TEMP(cnt,1:7)=[elcode str2double(A{1,1}{end-5,1}) str2double(A{1,1}{end-4,1}) str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1})...
+                                      str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+                cnt=cnt+1;
+            elseif elcode == 10
+                TEMP(cnt,1:10)=[elcode str2double(A{1,1}{end-8,1}) str2double(A{1,1}{end-7,1}) str2double(A{1,1}{end-6,1}) str2double(A{1,1}{end-5,1})...
+                                str2double(A{1,1}{end-4,1}) str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+                cnt=cnt+1;
+            elseif elcode==16
+                TEMP(cnt,1:9)=[elcode str2double(A{1,1}{end-7,1}) str2double(A{1,1}{end-6,1}) str2double(A{1,1}{end-5,1}) str2double(A{1,1}{end-4,1})...
+                              str2double(A{1,1}{end-3,1}) str2double(A{1,1}{end-2,1}) str2double(A{1,1}{end-1,1}) str2double(A{1,1}{end,1})];
+                cnt=cnt+1;
+            end
+        end
     end
+    
     fclose(fid);
 end
 
