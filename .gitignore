@@ -1,0 +1,9 @@
+#Ignore temporary matlab files
+*~
+*.mexa64
+
+
+
+
+
+
