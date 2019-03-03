@@ -1,6 +1,11 @@
 function URF=ComputeURF(XYZ, Vxyz, opt)
 % URF=ComputeURF(XYZ, Vxyz, opt)
-% Computes the Unit Response Function for a given streamline.
+% Computes the Unit Response Function for a given streamline. This function
+% discretizes the streamline and solves the 1D Advection Dispersion
+% Equation using a unit input of unit step at one side and returns the
+% concentration at the other side of the streamline. Using the option
+% structure parameters such as discretization size, lambda or longitudinal
+% dispersivity can be configured.
 %
 %
 % Input data:
@@ -17,6 +22,16 @@ function URF=ComputeURF(XYZ, Vxyz, opt)
 %        lambda.val : if type == 1, lambda = lambda.val(1)
 %                     if type == 0, lambda = lambda.val ( lambda.val has to
 %                     be equal to Np)
+%       aL : The longitudinal dispersivity is defined as function of
+%            streamline length in the form of aL = alpha*L^beta, where L is
+%            the streamline length and the two parameters are defined in a
+%            structure with the following fields:
+%       aL. alpha : is the alpha value. The default value if either the 
+%                   aL or alpha field is not present in the structure is 
+%                   0.32, which is based on leterature e.g. Neuman 1990
+%                (https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/WR026i008p01749)
+%       aL.beta : Similarly this is the beta of the function that describes the
+%              longitudinal dispesivity. The default value is 0.83.
 %
 % Output data
 % URF  : Unit response function
@@ -65,8 +80,20 @@ else
     end
 end
 
+if ~isfield(opt, 'aL')
+    opt.aL.alpha = 0.32;
+    opt.aL.beta = 0.83;
+else
+    if ~isfield(opt.aL, 'alpha')
+        opt.aL.alpha = 0.32;
+    end
+    if ~isfield(opt.aL, 'beta')
+        opt.aL.beta = 0.83;
+    end
+end
 
-aL=0.32.*P(end).^0.83;
+
+aL = opt.aL.alpha.*P(end).^opt.aL.beta;
 if P(end) < opt.Lmin
     lambda = mean(lambda);
     P=flipud(P(end)-P);

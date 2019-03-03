@@ -1,6 +1,9 @@
 #Ignore temporary matlab files
 *~
 *.mexa64
+*.mex
+*.o
+*.oct
 
 
 

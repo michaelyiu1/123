@@ -19,7 +19,7 @@ if exist('OCTAVE_VERSION')
     mkoctfile Part_Track_oct.cpp
     
     cd([msim_root '/mNPSAT/'])
-    mex calcbtc_oct.cpp
+    mkoctfile calcbtc_oct.cpp
     
 else
     cd([msim_root '/mPart/'])
